@@ -33,7 +33,7 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 items-start">
             <div className="sm:col-span-2">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
-              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:whitespace-nowrap">
+              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:whitespace-nowrap !w-[718px] !h-[60px]">
                 Jorgo Qirjaj — Product Manager
               </h1>
             </div>
