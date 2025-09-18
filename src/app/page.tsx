@@ -33,7 +33,7 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 items-start">
             <div className="sm:col-span-2">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
-              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight">
+              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:whitespace-nowrap">
                 Jorgo Qirjaj — Product Manager
               </h1>
             </div>
@@ -50,7 +50,7 @@ export default function Home() {
                   target="_blank"
                   className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
                 >
-                  <Linkedin size={16} /> Connect on LinkedIn
+                  <Linkedin size={16} /> LinkedIn
                   <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
                 <a
@@ -67,7 +67,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-[var(--color-border)] mt-6 sm:mt-10">
+            <div className="rounded-xl overflow-hidden border border-[var(--color-border)] mt-6 sm:mt-16">
               <img
                 alt="Portrait of Jorgo Qirjaj"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
@@ -224,13 +224,6 @@ export default function Home() {
           <div className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3">
             <MapPin size={18} /> <span>Houston, Texas</span>
           </div>
-          <a
-            href="/Jorgo_Qirjaj_CV.pdf"
-            download
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
-            <ArrowUpRight size={18} /> <span>Download CV (PDF)</span>
-          </a>
         </div>
       </section>
 
