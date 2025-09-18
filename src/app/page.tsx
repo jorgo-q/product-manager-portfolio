@@ -30,12 +30,14 @@ export default function Home() {
       <section id="top" className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
-          <div className="grid gap-8 sm:grid-cols-[1.2fr_.8fr] items-start">
-            <div>
+          <div className="grid gap-8 sm:grid-cols-2 items-start">
+            <div className="sm:col-span-2">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
               <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight">
                 Jorgo Qirjaj — Product Manager
               </h1>
+            </div>
+            <div>
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
@@ -46,38 +48,31 @@ export default function Home() {
                 <Link
                   href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
                   target="_blank"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
                   <Linkedin size={16} /> Connect on LinkedIn
                   <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
                 <a
                   href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">
-
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity"
+                >
                   <Mail size={16} /> Email me
-                </a>
-                <a
-                  href="/Jorgo_Qirjaj_CV.pdf"
-                  download
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
-                  Download CV <ArrowUpRight size={16} className="opacity-70" />
                 </a>
                 <Link
                   href="/cv"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
                   View CV <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
+            <div className="rounded-xl overflow-hidden border border-[var(--color-border)] mt-6 sm:mt-10">
               <img
                 alt="Portrait of Jorgo Qirjaj"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-                className="h-56 w-full object-cover" />
-
+                className="h-56 w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -215,15 +210,15 @@ export default function Home() {
         <div className="mt-6 grid gap-4 sm:grid-cols-4">
           <a
             href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
-
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
+          >
             <Mail size={18} /> <span>qirjaj.jorgo@gmail.com</span>
           </a>
           <Link
             href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
             target="_blank"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
-
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
+          >
             <Linkedin size={18} /> <span>LinkedIn</span>
           </Link>
           <div className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3">
@@ -232,8 +227,8 @@ export default function Home() {
           <a
             href="/Jorgo_Qirjaj_CV.pdf"
             download
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
-
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
+          >
             <ArrowUpRight size={18} /> <span>Download CV (PDF)</span>
           </a>
         </div>
@@ -244,11 +239,11 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-10 text-sm flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Jorgo Qirjaj</p>
           <div className="flex items-center gap-4">
-            <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/" target="_blank" className="hover:opacity-70">LinkedIn</Link> 
+            <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/" target="_blank" className="hover:opacity-70">LinkedIn</Link>
             <a href="#top" className="hover:opacity-70">Back to top</a>
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
