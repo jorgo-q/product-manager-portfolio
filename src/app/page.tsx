@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowUpRight, Mail, Linkedin, MapPin } from "lucide-react";
 
 const NAV = [
-  { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
@@ -31,63 +30,55 @@ export default function Home() {
       <section id="top" className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
-          <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
-          <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight">
-            Jorgo Qirjaj — Product Manager
-          </h1>
-          <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
-            <MapPin size={16} /> Houston, Texas
-          </p>
-          <p className="mt-5 max-w-2xl text-base text-[var(--color-muted-foreground)]">
-            Fulbright Fellow @ Rice with a CS background and cross‑functional experience building global SaaS products. Skilled in product discovery, stakeholder management, and leadership with hands‑on experience in AI tools. Currently expanding technical expertise in engineering management, data science, and AI to build scalable and user‑centric products.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Link
-              href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
-              target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
-              <Linkedin size={16} /> Connect on LinkedIn
-              <ArrowUpRight size={16} className="opacity-70" />
-            </Link>
-            <a
-              href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity"
-            >
-              <Mail size={16} /> Email me
-            </a>
-            <a
-              href="/Jorgo_Qirjaj_CV.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
-              Download CV <ArrowUpRight size={16} className="opacity-70" />
-            </a>
-            <Link
-              href="/cv"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
-              View CV <ArrowUpRight size={16} className="opacity-70" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* About */}
-      <section id="about" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <div className="grid gap-8 sm:grid-cols-[1.2fr_.8fr] items-start">
-          <div>
-            <h2 className="text-lg font-medium">About</h2>
-            <p className="mt-4 text-[var(--color-muted-foreground)]">
-              I enjoy turning ambiguous problems into simple, lovable products. My work spans platform and customer‑facing initiatives, analytics‑driven decision making, and crisp execution with cross‑functional partners.
-            </p>
-          </div>
-          <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
-            <img
-              alt="Portrait of Jorgo Qirjaj"
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="h-56 w-full object-cover"
-            />
+          <div className="grid gap-8 sm:grid-cols-[1.2fr_.8fr] items-start">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
+              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight">
+                Jorgo Qirjaj — Product Manager
+              </h1>
+              <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
+                <MapPin size={16} /> Houston, Texas
+              </p>
+              <p className="mt-5 max-w-2xl text-base text-[var(--color-muted-foreground)]">
+                Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach. I love turning ambiguity into simple, lovable experiences—partnering closely with teams and customers. Away from work, I coach rhythm cycling at SunRide and enjoy dancing, running, writing, and meditating.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
+                  target="_blank"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
+                  <Linkedin size={16} /> Connect on LinkedIn
+                  <ArrowUpRight size={16} className="opacity-70" />
+                </Link>
+                <a
+                  href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity"
+                >
+                  <Mail size={16} /> Email me
+                </a>
+                <a
+                  href="/Jorgo_Qirjaj_CV.pdf"
+                  download
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
+                  Download CV <ArrowUpRight size={16} className="opacity-70" />
+                </a>
+                <Link
+                  href="/cv"
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
+                  View CV <ArrowUpRight size={16} className="opacity-70" />
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
+              <img
+                alt="Portrait of Jorgo Qirjaj"
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
+                className="h-56 w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -111,7 +102,7 @@ export default function Home() {
               role: "Technical Product Manager",
               period: "Mar 2024 — Jul 2025 · Tirana, Albania",
               impact: [
-                "Led a team of 20+ engineers building Albania's first Open Banking services for EasyPay the first & leading Albanian Fintech",
+                "Led a team of 20+ engineers building Albania's first Open Banking services",
               ],
             },
             {
@@ -119,15 +110,15 @@ export default function Home() {
               role: "Product Manager",
               period: "Jan 2024 — Jan 2025 · Ireland, Remote",
               impact: [
-                "Trainly is a habit-forming wellness and fitness app",
+                "Defined and shipped an MVP for a habit-forming wellness app",
               ],
             },
             {
               company: "Publer",
-              role: "Head of Customer Experience → Product Success Manager → Tech Support",
+              role: "Tech Support → Product Success Manager → Head of Customer Experience",
               period: "Feb 2021 — Dec 2023 · Tirana, Albania",
               impact: [
-                "Publer is a global social media management SaaS that helps over 300K+ users and business with managing & elevating their online presence",
+                "Global SaaS serving 300K+ users; elevated CX and product adoption",
               ],
             },
           ].map((job) => (
@@ -183,13 +174,13 @@ export default function Home() {
           <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product skills</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Market-fit", "Roadmapping", "Stakeholder management", "Scrum", "Discovery interviews", "A/B testing", "Prioritization", "Go-to-market"].map((s) => (
+              {["Market-fit", "Roadmapping", "Stakeholder management", "Scrum", "Discovery interviews", "A/B testing", "Prioritization"].map((s) => (
                 <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
               ))}
             </ul>
             <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Linear", "Figma", "Mixpanel", "GA4", "Amplitude", "Notion", "Python", "SQL"].map((t) => (
+              {["Jira", "Miro", "Linear", "Figma", "Mixpanel", "Notion", "Claude", "Supabase", "Python", "SQL"].map((t) => (
                 <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
               ))}
             </ul>
@@ -198,7 +189,12 @@ export default function Home() {
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
             <ul className="mt-3 grid gap-2 text-sm">
               {["Professional Scrum Product Owner I (PSPO I)", "Becoming a PM", "Reforge Product Management Courses"].map((c) => (
-                <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">{c}</li>
+                <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
+                  <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
+                    <span>{c}</span>
+                    <ArrowUpRight size={14} className="opacity-70" />
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
