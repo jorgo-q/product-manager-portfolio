@@ -4,12 +4,12 @@ import Link from "next/link";
 import { ArrowUpRight, Mail, Linkedin, MapPin } from "lucide-react";
 
 const NAV = [
-  { href: "#experience", label: "Experience" },
-  { href: "#education", label: "Education" },
-  { href: "#skills", label: "Skills" },
-  { href: "#hobbies", label: "Hobbies" },
-  { href: "#contact", label: "Contact" },
-];
+{ href: "#experience", label: "Experience" },
+{ href: "#education", label: "Education" },
+{ href: "#skills", label: "Skills" },
+{ href: "#hobbies", label: "Hobbies" },
+{ href: "#contact", label: "Contact" }];
+
 
 export default function Home() {
   return (
@@ -19,9 +19,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
           <a href="#top" className="font-semibold tracking-tight">Jorgo Qirjaj</a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            {NAV.map((item) => (
-              <a key={item.href} href={item.href} className="hover:opacity-70 transition-opacity">{item.label}</a>
-            ))}
+            {NAV.map((item) =>
+            <a key={item.href} href={item.href} className="hover:opacity-70 transition-opacity">{item.label}</a>
+            )}
           </nav>
         </div>
       </header>
@@ -46,28 +46,28 @@ export default function Home() {
                 <Link
                   href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
                   target="_blank"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-                >
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
                   <Linkedin size={16} /> Connect on LinkedIn
                   <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
                 <a
                   href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity"
-                >
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">
+
                   <Mail size={16} /> Email me
                 </a>
                 <a
                   href="/Jorgo_Qirjaj_CV.pdf"
                   download
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-                >
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
                   Download CV <ArrowUpRight size={16} className="opacity-70" />
                 </a>
                 <Link
                   href="/cv"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-                >
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
                   View CV <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
               </div>
@@ -76,8 +76,8 @@ export default function Home() {
               <img
                 alt="Portrait of Jorgo Qirjaj"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-                className="h-56 w-full object-cover"
-              />
+                className="h-56 w-full object-cover" />
+
             </div>
           </div>
         </div>
@@ -89,40 +89,40 @@ export default function Home() {
         <ol className="mt-8 relative">
           <div className="absolute left-4 top-0 bottom-0 w-px bg-[var(--color-border)]" />
           {[
-            {
-              company: "Redocs",
-              role: "Technical Product Creator",
-              period: "Dec 2024 — Aug 2025 · NYC, Remote",
-              impact: [
-                "Streamlining real estate compliance for 40K+ buildings in NYC with AI-powered apps",
-              ],
-            },
-            {
-              company: "EasyPay",
-              role: "Technical Product Manager",
-              period: "Mar 2024 — Jul 2025 · Tirana, Albania",
-              impact: [
-                "Led a team of 20+ engineers building Albania's first Open Banking services",
-              ],
-            },
-            {
-              company: "Trainly",
-              role: "Product Manager",
-              period: "Jan 2024 — Jan 2025 · Ireland, Remote",
-              impact: [
-                "Defined and shipped an MVP for a habit-forming wellness app",
-              ],
-            },
-            {
-              company: "Publer",
-              role: "Tech Support → Product Success Manager → Head of Customer Experience",
-              period: "Feb 2021 — Dec 2023 · Tirana, Albania",
-              impact: [
-                "Global SaaS serving 300K+ users; elevated CX and product adoption",
-              ],
-            },
-          ].map((job) => (
-            <li key={job.company} className="grid grid-cols-[2rem_1fr] gap-4 py-6">
+          {
+            company: "Redocs",
+            role: "Technical Product Creator",
+            period: "Dec 2024 — Aug 2025 · NYC, Remote",
+            impact: [
+            "Streamlining real estate compliance for 40K+ buildings in NYC with AI-powered apps"]
+
+          },
+          {
+            company: "EasyPay",
+            role: "Technical Product Manager",
+            period: "Mar 2024 — Jul 2025 · Tirana, Albania",
+            impact: [
+            "Led a team of 20+ engineers building Albania's first Open Banking services"]
+
+          },
+          {
+            company: "Trainly",
+            role: "Product Manager",
+            period: "Jan 2024 — Jan 2025 · Ireland, Remote",
+            impact: [
+            "Defined and shipped an MVP for a habit-forming wellness app"]
+
+          },
+          {
+            company: "Publer",
+            role: "Tech Support → Product Success Manager → Head of Customer Experience",
+            period: "Feb 2021 — Dec 2023 · Tirana, Albania",
+            impact: [
+            "Global SaaS serving 300K+ users; elevated CX and product adoption"]
+
+          }].
+          map((job) =>
+          <li key={job.company} className="grid grid-cols-[2rem_1fr] gap-4 py-6">
               <div className="relative">
                 <div className="mt-1 size-2.5 rounded-full bg-[var(--color-foreground)]" />
               </div>
@@ -132,13 +132,13 @@ export default function Home() {
                   <span className="text-sm text-[var(--color-muted-foreground)]">{job.period}</span>
                 </div>
                 <ul className="mt-3 grid gap-2 text-[var(--color-muted-foreground)]">
-                  {job.impact.map((line) => (
-                    <li key={line} className="leading-relaxed">• {line}</li>
-                  ))}
+                  {job.impact.map((line) =>
+                <li key={line} className="leading-relaxed">• {line}</li>
+                )}
                 </ul>
               </div>
             </li>
-          ))}
+          )}
         </ol>
       </section>
 
@@ -148,7 +148,7 @@ export default function Home() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div className="rounded-lg border border-[var(--color-border)] p-5">
             <h3 className="font-medium">Master of Engineering Management & Leadership — Rice University</h3>
-            <p className="mt-1 text-sm text-[var(--color-muted-foreground)]">Aug 2025 — Dec 2026 · Fulbright Scholar · Focus: CS, Data Science & AI</p>
+            <p className="mt-1 text-sm text-[var(--color-muted-foreground)] !w-[445px] !h-10">Aug 2025 — Dec 2026 · Fulbright Scholar · Focus: CS, Data Science & AI</p>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li>Coursework: Product Management, DS & ML, Python</li>
               <li>Projects: AI cooking assistant SaaS; ML to predict SaaS performance</li>
@@ -174,28 +174,28 @@ export default function Home() {
           <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product skills</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Market-fit", "Roadmapping", "Stakeholder management", "Scrum", "Discovery interviews", "A/B testing", "Prioritization"].map((s) => (
-                <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
-              ))}
+              {["Market-fit", "Roadmapping", "Stakeholder management", "Scrum", "Discovery interviews", "A/B testing", "Prioritization"].map((s) =>
+              <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
+              )}
             </ul>
             <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Linear", "Figma", "Mixpanel", "Notion", "Claude", "Supabase", "Python", "SQL"].map((t) => (
-                <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
-              ))}
+              {["Jira", "Miro", "Linear", "Figma", "Mixpanel", "Notion", "Claude", "Supabase", "Python", "SQL"].map((t) =>
+              <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
+              )}
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
             <ul className="mt-3 grid gap-2 text-sm">
-              {["Professional Scrum Product Owner I (PSPO I)", "Becoming a PM", "Reforge Product Management Courses"].map((c) => (
-                <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
+              {["Professional Scrum Product Owner I (PSPO I)", "Becoming a PM", "Reforge Product Management Courses"].map((c) =>
+              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
                   <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
                     <span>{c}</span>
                     <ArrowUpRight size={14} className="opacity-70" />
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
@@ -215,15 +215,15 @@ export default function Home() {
         <div className="mt-6 grid gap-4 sm:grid-cols-4">
           <a
             href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
+
             <Mail size={18} /> <span>qirjaj.jorgo@gmail.com</span>
           </a>
           <Link
             href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
             target="_blank"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
+
             <Linkedin size={18} /> <span>LinkedIn</span>
           </Link>
           <div className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3">
@@ -232,8 +232,8 @@ export default function Home() {
           <a
             href="/Jorgo_Qirjaj_CV.pdf"
             download
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
+
             <ArrowUpRight size={18} /> <span>Download CV (PDF)</span>
           </a>
         </div>
@@ -249,6 +249,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
