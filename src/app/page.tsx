@@ -41,7 +41,7 @@ export default function Home() {
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
-              <p className="mt-5 max-w-2xl text-base text-[var(--color-muted-foreground)]">
+              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !w-full !h-[275px] !max-w-full">
                 Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach. I love turning ambiguity into simple, lovable experiences—partnering closely with teams and customers. Away from work, I coach rhythm cycling at SunRide and enjoy dancing, running, writing, and meditating.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -71,7 +71,7 @@ export default function Home() {
               <img
                 alt="Portrait of Jorgo Qirjaj"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-                className="object-cover !w-[99.6%] !h-[249px] !max-w-[99.6%]" />
+                className="object-cover !w-[468px] !h-[433px] !max-w-[468px]" />
 
             </div>
           </div>
