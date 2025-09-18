@@ -29,7 +29,7 @@ export default function Home() {
       {/* Hero */}
       <section id="top" className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+        <div className="mx-auto px-6 py-20 sm:py-28 !w-[995px] !h-full !max-w-[995px]">
           <div className="grid gap-8 sm:grid-cols-2 items-start">
             <div className="sm:col-span-2">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
