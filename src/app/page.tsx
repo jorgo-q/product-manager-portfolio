@@ -48,21 +48,21 @@ export default function Home() {
                 <Link
                   href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
                   target="_blank"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-                >
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
                   <Linkedin size={16} /> LinkedIn
                   <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
                 <a
                   href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity"
-                >
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">
+
                   <Mail size={16} /> Email me
                 </a>
                 <Link
                   href="/cv"
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-                >
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
                   View CV <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
               </div>
@@ -71,8 +71,8 @@ export default function Home() {
               <img
                 alt="Portrait of Jorgo Qirjaj"
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-                className="h-56 w-full object-cover"
-              />
+                className="object-cover !w-[99.6%] !h-[249px] !max-w-[99.6%]" />
+
             </div>
           </div>
         </div>
@@ -210,15 +210,15 @@ export default function Home() {
         <div className="mt-6 grid gap-4 sm:grid-cols-4">
           <a
             href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
+
             <Mail size={18} /> <span>qirjaj.jorgo@gmail.com</span>
           </a>
           <Link
             href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
             target="_blank"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors"
-          >
+            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
+
             <Linkedin size={18} /> <span>LinkedIn</span>
           </Link>
           <div className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3">
@@ -237,6 +237,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
