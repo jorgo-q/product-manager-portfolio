@@ -30,7 +30,7 @@ export default function Home() {
       <section id="top" className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
         <div className="mx-auto px-6 py-20 sm:py-28 !w-[995px] !h-full !max-w-[995px]">
-          <div className="grid gap-8 sm:grid-cols-2 items-start">
+          <div className="grid gap-8 sm:grid-cols-2 items-start !w-[941px] !h-full">
             <div className="sm:col-span-2">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
               <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:whitespace-nowrap !w-[718px] !h-[60px]">
@@ -78,7 +78,7 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !w-[99.6%] !h-[298px] !max-w-[99.6%]" />
+              className="object-cover !w-[99.6%] !h-[298px] !max-w-[99.6%] !text-justify" />
           </div>
           <div>
             <h2 className="text-lg font-medium">About</h2>
