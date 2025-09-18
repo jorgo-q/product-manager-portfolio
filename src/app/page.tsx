@@ -67,13 +67,27 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-[var(--color-border)] mt-6 sm:mt-16">
-              <img
-                alt="Portrait of Jorgo Qirjaj"
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-                className="object-cover !w-[468px] !h-[433px] !max-w-[468px]" />
+          </div>
+        </div>
+      </section>
 
-            </div>
+      {/* About */}
+      <section id="about" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+        <div className="grid gap-8 sm:grid-cols-2 items-start">
+          <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
+            <img
+              alt="Portrait of Jorgo Qirjaj"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
+              className="object-cover !w-full !h-[433px]" />
+          </div>
+          <div>
+            <h2 className="text-lg font-medium">About</h2>
+            <p className="mt-4 text-[var(--color-muted-foreground)]">
+              I'm a Fulbright Fellow at Rice with a CS background, focused on building practical, people-first SaaS products.
+            </p>
+            <p className="mt-4 text-[var(--color-muted-foreground)]">
+              Outside of work, I'm a rhythm cycling coach at SunRide and enjoy dancing, running, writing, and meditating.
+            </p>
           </div>
         </div>
       </section>
