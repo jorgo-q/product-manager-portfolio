@@ -41,7 +41,7 @@ export default function Home() {
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
-              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !w-full !h-[266px] !max-w-full !whitespace-pre-line">Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach. 
+              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-[77px] !max-w-full">Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach. 
 
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
