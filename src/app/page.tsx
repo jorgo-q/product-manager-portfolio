@@ -141,7 +141,7 @@ export default function Home() {
       <section id="education" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <h2 className="text-lg font-medium">Education</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-lg border border-[var(--color-border)] p-5 !w-[87.9%] !h-full">
+          <div className="rounded-lg border border-[var(--color-border)] p-5 !w-[43%] !h-full">
             <h3 className="font-medium">Master of Engineering Management & Leadership — Rice University</h3>
             <p className="mt-1 text-sm text-[var(--color-muted-foreground)] !w-[445px] !h-10">Aug 2025 — Dec 2026 · Fulbright Scholar · Focus: CS, Data Science & AI</p>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
