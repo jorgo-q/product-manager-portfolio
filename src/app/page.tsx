@@ -150,8 +150,8 @@ export default function Home() {
               <li>Activities: Doerr Leadership, ASEM, Fulbright</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 !w-[422px] !h-full">
-            <h3 className="font-medium">BA in Computer Science — American University in Bulgaria (AUBG)</h3>
+          <div className="rounded-lg border border-[var(--color-border)] p-5 !w-[483px] !h-[232px]">
+            <h3 className="font-medium !whitespace-pre-line !text-[15px]">BA in Computer ScienceAmerican University in Bulgaria (AUBG)</h3>
             <p className="mt-1 text-sm text-[var(--color-muted-foreground)]">2016 — 2020 · Minors: Mathematics & Information Systems</p>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li>Coursework: Software Eng, Big Data, Data Analytics, Python, Advanced Calculus</li>
