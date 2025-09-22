@@ -29,25 +29,23 @@ export default function Home() {
       {/* Hero */}
       <section id="top" className="relative">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
-        <div className="mx-auto px-6 py-20 sm:py-28 !w-[995px] !h-full !max-w-[995px]">
-          <div className="grid gap-8 sm:grid-cols-2 items-start !w-[941px] !h-full">
-            <div className="sm:col-span-2">
+        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+          <div className="grid gap-8 sm:grid-cols-2 items-start">
+            <div className="sm:col-span-2 max-w-2xl">
               <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
-              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:whitespace-nowrap !w-[718px] !h-[60px]">
+              <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight !w-[721px] !h-[120px]">
                 Jorgo Qirjaj — Product Manager
               </h1>
             </div>
-            <div>
+            <div className="sm:col-span-2 max-w-2xl">
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
-              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-36 !max-w-full">I'm a Fulbright Fellow at Rice University studying Engineering Management & Leadership with a Computer Science background.
-
-As a Product and Technical PM, I build scalable, user‑centric products across fintech, SaaS, AI, and wellness.
-
-My style is practical and people‑first—turning real problems into measurable impact.
-
-              </p>
+              <div className="mt-5 text-base text-[var(--color-muted-foreground)] leading-relaxed space-y-3">
+                <p>I'm a Fulbright Fellow at Rice University studying Engineering Management & Leadership with a Computer Science background.</p>
+                <p>As a Product and Technical PM, I build scalable, user‑centric products across fintech, SaaS, AI, and wellness.</p>
+                <p>My style is practical and people‑first—turning real problems into measurable impact.</p>
+              </div>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
                   href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
@@ -211,28 +209,28 @@ My style is practical and people‑first—turning real problems into measurable
           <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
             <ul className="mt-3 grid gap-2 text-sm">
-              {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) => (
-                <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
+              {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) =>
+              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
                   <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
                     <span>{c}</span>
                     <ArrowUpRight size={14} className="opacity-70" />
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product Skills</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Market-fit", "Roadmapping", "Stakeholder Management", "Discovery", "A/B testing", "Prioritization"].map((s) => (
-                <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
-              ))}
+              {["Market-fit", "Roadmapping", "Stakeholder Management", "Discovery", "A/B testing", "Prioritization"].map((s) =>
+              <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
+              )}
             </ul>
             <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Figma", "Linear", "Notion", "Mixpanel", "Supabase", "Python", "SQL", "Claude"].map((t) => (
-                <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
-              ))}
+              {["Jira", "Miro", "Figma", "Linear", "Notion", "Mixpanel", "Supabase", "Python", "SQL", "Claude"].map((t) =>
+              <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
+              )}
             </ul>
           </div>
         </div>
