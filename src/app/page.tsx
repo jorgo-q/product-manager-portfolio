@@ -5,9 +5,9 @@ import { ArrowUpRight, Mail, Linkedin, MapPin } from "lucide-react";
 
 const NAV = [
 { href: "#experience", label: "Experience" },
+{ href: "#projects", label: "Projects" },
 { href: "#education", label: "Education" },
 { href: "#skills", label: "Skills" },
-{ href: "#hobbies", label: "Hobbies" },
 { href: "#contact", label: "Contact" }];
 
 
@@ -57,12 +57,6 @@ My style is practical and people‑first—turning real problems into measurable
                   <Linkedin size={16} /> LinkedIn
                   <ArrowUpRight size={16} className="opacity-70" />
                 </Link>
-                <a
-                  href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">
-
-                  <Mail size={16} /> Email me
-                </a>
                 <Link
                   href="/cv"
                   className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
@@ -78,12 +72,6 @@ My style is practical and people‑first—turning real problems into measurable
       {/* About */}
       <section id="about" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <div className="grid gap-8 sm:grid-cols-2 items-start">
-          <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
-            <img
-              alt="Portrait of Jorgo Qirjaj"
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !text-justify !w-[468px] !h-[401px] !max-w-[468px]" />
-          </div>
           <div>
             <h2 className="text-lg font-medium">About</h2>
             <p className="mt-4 text-[var(--color-muted-foreground)]">
@@ -92,6 +80,12 @@ My style is practical and people‑first—turning real problems into measurable
             <p className="mt-4 text-[var(--color-muted-foreground)]">
               My approach is clear goals, tight feedback loops, and simple systems that scale, partnering closely with engineers, designers, and customers to reduce risk early and ship value fast. I'm people‑first and impact‑driven, always aiming for solutions that feel intuitive and move the needle. Outside of work, I'm a rhythm cycling coach at SunRide, where I build community through music and movement. When I'm not in product mode, you'll find me running, dancing, writing, or meditating—always bringing positive energy to the teams I work with.
             </p>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
+            <img
+              alt="Portrait of Jorgo Qirjaj"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
+              className="object-cover !text-justify !w-[468px] !h-[401px] !max-w-[468px]" />
           </div>
         </div>
       </section>
@@ -155,26 +149,56 @@ My style is practical and people‑first—turning real problems into measurable
         </ol>
       </section>
 
+      {/* Projects */}
+      <section id="projects" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+        <h2 className="text-lg font-medium">Projects</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
+            <h3 className="font-medium">Open Banking — EasyPay</h3>
+            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
+              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Banks were closed systems limiting fintech innovation.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led 20+ engineers to launch Albania's first Open Banking services.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Unlocked integrations and new revenue lines; enterprise partnerships.</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
+            <h3 className="font-medium">Compliance Automation — Redocs</h3>
+            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
+              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Costly, manual NYC compliance for 40K+ buildings.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built AI-powered workflows and internal tools.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Reduced turnaround time; increased accuracy and throughput.</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-[var(--color-border)] p-5 sm:col-span-2">
+            <h3 className="font-medium">Wellness App MVP — Trainly</h3>
+            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
+              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Low adherence to healthy habits.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Defined and shipped a habit-forming MVP with coaching loops.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Clear MVP scope; accelerated learning and pilot traction.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Education */}
       <section id="education" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <h2 className="text-lg font-medium">Education</h2>
         <div className="mt-6 grid gap-4 grid-cols-2">
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium !whitespace-pre-line">Master of Engineering Management & Leadership Rice University</h3>
-            <p className="mt-1 text-sm text-[var(--color-muted-foreground)]">Aug 2025 — Dec 2026 · Fulbright Scholar · Focus: CS, Data Science & AI</p>
+            <h3 className="font-medium">Master of Engineering Management & Leadership — Rice University (Fulbright)</h3>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li>Coursework: Product Management, DS & ML, Python</li>
-              <li>Projects: AI cooking assistant SaaS; ML to predict SaaS performance</li>
-              <li>Activities: Doerr Leadership, ASEM, Fulbright</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Focus areas:</span> Computer Science, Data Science & AI</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Key projects:</span> AI cooking assistant SaaS; ML to predict SaaS performance</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> Doerr Leadership, ASEM, Fulbright community</li>
             </ul>
           </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium !whitespace-pre-line !text-[15px] !whitespace-pre-line">{`BA in Computer Science\nAmerican University in Bulgaria (AUBG)`}</h3>
-            <p className="mt-1 text-sm text-[var(--color-muted-foreground)]">2016 — 2020 · Minors: Mathematics & Information Systems</p>
+            <h3 className="font-medium">BA in Computer Science — American University in Bulgaria (AUBG)</h3>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li>Coursework: Software Eng, Big Data, Data Analytics, Python, Advanced Calculus</li>
-              <li>Projects: Adaptive Neural Network "Snake Game"; Big Data & ML in Smart Cities</li>
-              <li>Activities: Oxford Summer School, TEDxAUBG President, Broadway Club Choreographer</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Minors:</span> Mathematics & Information Systems</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Key coursework:</span> Software Eng, Big Data, Data Analytics, Python, Advanced Calculus</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Projects:</span> Adaptive Neural Network "Snake Game"; Big Data & ML in Smart Cities</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Leadership:</span> TEDxAUBG President; Broadway Club Choreographer; Oxford Summer School</li>
             </ul>
           </div>
         </div>
@@ -185,41 +209,33 @@ My style is practical and people‑first—turning real problems into measurable
         <h2 className="text-lg font-medium">Skills & Certifications</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div>
-            <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product skills</h3>
-            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Market-fit", "Roadmapping", "Stakeholder management", "Scrum", "Discovery interviews", "A/B testing", "Prioritization"].map((s) =>
-              <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
-              )}
-            </ul>
-            <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
-            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Linear", "Figma", "Mixpanel", "Notion", "Claude", "Supabase", "Python", "SQL"].map((t) =>
-              <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
-              )}
-            </ul>
-          </div>
-          <div>
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
             <ul className="mt-3 grid gap-2 text-sm">
-              {["Professional Scrum Product Owner I (PSPO I)", "Becoming a PM", "Reforge Product Management Courses"].map((c) =>
-              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
+              {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) => (
+                <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
                   <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
                     <span>{c}</span>
                     <ArrowUpRight size={14} className="opacity-70" />
                   </Link>
                 </li>
-              )}
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product Skills</h3>
+            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+              {["Market-fit", "Roadmapping", "Stakeholder Management", "Discovery", "A/B testing", "Prioritization"].map((s) => (
+                <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
+              ))}
+            </ul>
+            <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
+            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+              {["Jira", "Miro", "Figma", "Linear", "Notion", "Mixpanel", "Supabase", "Python", "SQL", "Claude"].map((t) => (
+                <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
+              ))}
             </ul>
           </div>
         </div>
-      </section>
-
-      {/* Hobbies */}
-      <section id="hobbies" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">Hobbies</h2>
-        <p className="mt-4 text-[var(--color-muted-foreground)]">
-          Rhythm cycling coach at SunRide, building culture and community through music and motivation.
-        </p>
       </section>
 
       {/* Contact */}
@@ -250,7 +266,7 @@ My style is practical and people‑first—turning real problems into measurable
         <div className="mx-auto max-w-5xl px-6 py-10 text-sm flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Jorgo Qirjaj</p>
           <div className="flex items-center gap-4">
-            <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/" target="_blank" className="hover:opacity-70">LinkedIn</Link>
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">Let's build something together 🚀</a>
             <a href="#top" className="hover:opacity-70">Back to top</a>
           </div>
         </div>
