@@ -41,7 +41,11 @@ export default function Home() {
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
-              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-[107px] !max-w-full">Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach. 
+              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-[107px] !max-w-full">I'm a Fulbright Fellow at Rice University studying Engineering Management & Leadership with a Computer Science background.
+
+As a Product and Technical PM, I build scalable, user‑centric products across fintech, SaaS, AI, and wellness.
+
+My style is practical and people‑first—turning real problems into measurable impact.
 
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -83,10 +87,10 @@ export default function Home() {
           <div>
             <h2 className="text-lg font-medium">About</h2>
             <p className="mt-4 text-[var(--color-muted-foreground)]">
-              I'm a Fulbright Fellow at Rice with a CS background, focused on building practical, people-first SaaS products.
+              I build products that work in the real world. I've led Albania's first Open Banking services at EasyPay, shipped compliance automation at Redocs, and defined a wellness app MVP at Trainly—after helping scale Publer to 300K+ users globally.
             </p>
             <p className="mt-4 text-[var(--color-muted-foreground)]">
-              Outside of work, I'm a rhythm cycling coach at SunRide and enjoy dancing, running, writing, and meditating.
+              My approach is clear goals, tight feedback loops, and simple systems that scale, partnering closely with engineers, designers, and customers to reduce risk early and ship value fast. I'm people‑first and impact‑driven, always aiming for solutions that feel intuitive and move the needle. Outside of work, I'm a rhythm cycling coach at SunRide, where I build community through music and movement. When I'm not in product mode, you'll find me running, dancing, writing, or meditating—always bringing positive energy to the teams I work with.
             </p>
           </div>
         </div>
