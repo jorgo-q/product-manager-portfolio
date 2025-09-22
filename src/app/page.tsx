@@ -202,9 +202,9 @@ export default function Home() {
       <section id="skills" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <h2 className="text-lg font-medium">Skills & Certifications</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div>
+          <div className="!w-[358px] !h-full">
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
-            <ul className="mt-3 grid gap-2 text-sm">
+            <ul className="mt-3 grid gap-2 text-sm !w-[349px] !h-[130px]">
               {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) =>
               <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2 !w-full !h-[38px]">
                   <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
