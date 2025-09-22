@@ -41,7 +41,7 @@ export default function Home() {
               <p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
                 <MapPin size={16} /> Houston, Texas
               </p>
-              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-[107px] !max-w-full">I'm a Fulbright Fellow at Rice University studying Engineering Management & Leadership with a Computer Science background.
+              <p className="mt-5 text-base text-[var(--color-muted-foreground)] !whitespace-pre-line !w-full !h-[146px] !max-w-full">I'm a Fulbright Fellow at Rice University studying Engineering Management & Leadership with a Computer Science background.
 
 As a Product and Technical PM, I build scalable, user‑centric products across fintech, SaaS, AI, and wellness.
 
