@@ -146,7 +146,15 @@ export default function Home() {
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <h2 className="text-lg font-medium">Projects</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid gap-4">
+          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
+            <h3 className="font-medium">Compliance Automation — Redocs</h3>
+            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
+              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Costly, manual NYC compliance for 40K+ buildings.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built AI-powered workflows and internal tools.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Reduced turnaround time; increased accuracy and throughput.</li>
+            </ul>
+          </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
             <h3 className="font-medium">Open Banking — EasyPay</h3>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
@@ -156,14 +164,6 @@ export default function Home() {
             </ul>
           </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Compliance Automation — Redocs</h3>
-            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Costly, manual NYC compliance for 40K+ buildings.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built AI-powered workflows and internal tools.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Reduced turnaround time; increased accuracy and throughput.</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 sm:col-span-2">
             <h3 className="font-medium">Wellness App MVP — Trainly</h3>
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Low adherence to healthy habits.</li>
