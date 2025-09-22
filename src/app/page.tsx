@@ -82,7 +82,7 @@ My style is practical and people‑first—turning real problems into measurable
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !w-[99.6%] !h-[298px] !max-w-[99.6%] !text-justify" />
+              className="object-cover !text-justify !w-[468px] !h-[401px] !max-w-[468px]" />
           </div>
           <div>
             <h2 className="text-lg font-medium">About</h2>
