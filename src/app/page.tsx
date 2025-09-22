@@ -206,7 +206,7 @@ export default function Home() {
             <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
             <ul className="mt-3 grid gap-2 text-sm">
               {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) =>
-              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2">
+              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2 !w-full !h-[38px]">
                   <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
                     <span>{c}</span>
                     <ArrowUpRight size={14} className="opacity-70" />
