@@ -72,7 +72,9 @@ export default function Home() {
               I build products that work in the real world. I've led Albania's first Open Banking services at EasyPay, shipped compliance automation at Redocs, and defined a wellness app MVP at Trainly—after helping scale Publer to 300K+ users globally.
             </p>
             <p className="mt-4 text-[var(--color-muted-foreground)]">
-              My approach is clear goals, tight feedback loops, and simple systems that scale, partnering closely with engineers, designers, and customers to reduce risk early and ship value fast. I'm people‑first and impact‑driven, always aiming for solutions that feel intuitive and move the needle. Outside of work, I'm a rhythm cycling coach at SunRide, where I build community through music and movement. When I'm not in product mode, you'll find me running, dancing, writing, or meditating—always bringing positive energy to the teams I work with.
+              My approach is clear goals, tight feedback loops, and simple systems that scale, partnering closely with engineers, designers, and customers to reduce risk early and ship value fast. I'm people‑first and impact‑driven, always aiming for solutions that feel intuitive and move the needle. 
+              
+              Outside of work, I'm a rhythm cycling coach at SunRide, where I build community through music and movement. When I'm not in product mode, you'll find me running, dancing, writing, or meditating—always bringing positive energy to the teams I work with.
             </p>
           </div>
           <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
