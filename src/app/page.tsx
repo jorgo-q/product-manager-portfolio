@@ -88,7 +88,7 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !text-justify !w-[468px] !h-[340px] !max-w-[468px]" />
+              className="object-cover !text-justify !w-[468px] !h-[336px] !max-w-[468px]" />
           </div>
         </div>
       </section>
