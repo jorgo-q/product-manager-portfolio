@@ -33,7 +33,7 @@ export default function Home() {
           <div className="max-w-xl">
             <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
             <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:text-balance">
-              Fulbright Fellow @ Rice with a CS background, building global SaaS products with a practical, people-first approach.
+              Jorgo Qirjaj — Product Manager
             </h1>
             <p className="mt-3 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
               <MapPin size={16} /> Houston, Texas
@@ -95,7 +95,7 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">🧩 Projects</h2>
+        <h2 className="text-lg font-medium">Some of my work</h2>
         <div className="mt-6 grid gap-4">
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
             <h3 className="font-medium">ReHub Compliance Automation — Redocs</h3>
@@ -155,7 +155,7 @@ export default function Home() {
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Focus:</span> Computer & Data Science, AI, Product Management</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Key Projects:</span> AI-powered cooking assistant SaaS, ML model to predict customer churn</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> ASEM President, Doerr Leadership Coaching, oSTEM Mentor, Fulbright.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> ASEM President, Doerr Leadership Coaching, oSTEM Mentor, Fulbright</li>
             </ul>
           </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
@@ -163,7 +163,7 @@ export default function Home() {
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Minors:</span> Mathematics & Information Systems</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Key Projects:</span> Neural Network "Snake Game", Big Data & ML in Smart Cities</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Leadership:</span> TEDxAUBG President, Broadway Club Choreographer, Oxford Summer School</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> TEDxAUBG President, Broadway Club Choreographer, Oxford Summer School</li>
             </ul>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
             </ul>
             <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
             <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Figma", "Mixpanel", "Claude AI", "Python", "SQL"].map((t) =>
+              {["Jira", "Miro", "Figma", "Claude AI", "Python", "SQL"].map((t) =>
               <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
               )}
             </ul>
