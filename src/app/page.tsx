@@ -32,8 +32,8 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
           <div className="max-w-xl">
             <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">Product management</p>
-            <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:text-balance !w-[746px] !h-[120px]">
-              Jorgo Qirjaj — Product Manager
+            <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:text-balance !w-[746px] !h-[62px] !whitespace-pre-line">Jorgo Qirjaj
+
             </h1>
             <p className="mt-3 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
               <MapPin size={16} /> Houston, Texas
