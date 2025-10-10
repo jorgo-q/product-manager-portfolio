@@ -1,13 +1,13 @@
-# 🌐 PM Portfolio – Jorgo Qirjaj
+# PM Portfolio – Jorgo Qirjaj
 
 This is my personal **PM Portfolio**, (work in progress), built using **Next.js**, **Orchids AI**, and **Claude AI** as a creative coding assistant.  
 It’s a small project where I experiment with front-end development, product storytelling, and “vibe coding”, focusing on blending design and tech.
 
-🖥 **Live site:** [jorgoqirjaj.com](https://jorgoqirjaj.com)
+**Live site:** [jorgoqirjaj.com](https://jorgoqirjaj.com)
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 This project was bootstrapped with [Create Next App](https://nextjs.org/docs/app).
 
@@ -35,7 +35,7 @@ The page will auto-update as you edit the file.
 
 ---
 
-## 🧠 About the Project
+## About the Project
 
 * Built using **Next.js 15**
 * Styled with **Tailwind CSS**
@@ -47,7 +47,7 @@ This site is both a portfolio and a sandbox, serving as a space to test layouts,
 
 ---
 
-## 📚 Learn More
+## Tech Stack
 
 To learn more about the technologies used:
 
