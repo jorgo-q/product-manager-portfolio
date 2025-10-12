@@ -6,8 +6,6 @@ It’s a small project where I experiment with front-end development and “vibe
 
 **Live site:** [jorgoqirjaj.com](https://jorgoqirjaj.com)
 
----
-
 ## Getting Started
 
 This project was bootstrapped with [Create Next App](https://nextjs.org/docs/app).
@@ -34,7 +32,6 @@ app/page.tsx
 
 The page will auto-update as you edit the file.
 
----
 
 ## About the Project
 
@@ -44,9 +41,6 @@ The page will auto-update as you edit the file.
 * Experimented with **AI-assisted development** using **Orchids AI** and **Claude**
 * Deployed via **Vercel**
 
-This site is both a portfolio and a sandbox, serving as a space to test layouts, animations, and interactive components while maintaining a clean, minimal aesthetic.
-
----
 
 ## Tech Stack
 
