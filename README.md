@@ -1,7 +1,8 @@
 # PM Portfolio – Jorgo Qirjaj
 
 This is my personal **PM Portfolio**, (work in progress), built using **Next.js**, **Orchids AI**, and **Claude AI** as a creative coding assistant.  
-It’s a small project where I experiment with front-end development, product storytelling, and “vibe coding”, focusing on blending design and tech.
+
+It’s a small project where I experiment with front-end development and “vibe coding”. 
 
 **Live site:** [jorgoqirjaj.com](https://jorgoqirjaj.com)
 
