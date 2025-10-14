@@ -58,16 +58,14 @@ export default function Home() {
                 <Github size={16} /> GitHub
                 <ArrowUpRight size={16} className="opacity-70" />
               </Link>
-              <Link
-                href="/cv"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-                
+              <a
+                href="/JQ_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+                >
                 View CV <ArrowUpRight size={16} className="opacity-70" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+              </a>
 
       {/* About */}
       <section id="about" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
