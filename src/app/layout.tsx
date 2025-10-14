@@ -7,6 +7,9 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Jorgo Qirjaj — Product Manager",
   description: "Product manager portfolio highlighting experience across Redocs, EasyPay, Trainly, and Publer — strategy, execution, and impact.",
+  icons: {
+    icon: "FaviconSite.svg", 
+  },
 };
 
 export default function RootLayout({
