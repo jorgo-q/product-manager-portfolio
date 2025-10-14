@@ -1,6 +1,6 @@
-"use client";
+"use client"; 
 
-import Link from "next/link";
+import Link from "next/Link";
 import { ArrowUpRight, Mail, Linkedin, MapPin, Github } from "lucide-react";
 
 const NAV = [
@@ -8,8 +8,8 @@ const NAV = [
 { href: "#projects", label: "Projects" },
 { href: "#education", label: "Education" },
 { href: "#skills", label: "Skills" },
-{ href: "#contact", label: "Contact" }];
-
+{ href: "#contact", label: "Contact" }
+];
 
 export default function Home() {
   return (
