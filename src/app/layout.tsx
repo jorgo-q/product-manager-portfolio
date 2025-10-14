@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Jorgo Qirjaj — Product Manager",
   description: "Product manager portfolio highlighting experience across Redocs, EasyPay, Trainly, and Publer — strategy, execution, and impact.",
   icons: {
-    icon: "FaviconSite.svg", 
+    icon: "JFavicon.svg", 
   },
 };
 
