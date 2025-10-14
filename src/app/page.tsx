@@ -128,7 +128,7 @@ export default function Home() {
             <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Mar 2024 – Jul 2025 | Tirana, Albania</p>
             <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Closed banking systems limited fintech innovation and financial accessibility.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led 15+ engineers to develop Albania's first Open Banking services, integrating APIs for real-time account access and direct bank payments.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led the development Albania's first Open Banking services, integrating APIs for real-time account access and direct bank payments.</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Enabled new B2B fintech integrations, launched multiple payment features (Pay by Link, loans, donations), and increased CSAT.</li>
             </ul>
           </div>
@@ -137,14 +137,13 @@ export default function Home() {
             <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Jan 2024 – Jan 2025 | Ireland, Remote</p>
             <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Users struggled to maintain consistent workout habits and track workout progress.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Defined and shipped an MVP for a habit-forming wellness app, integrating APIs for workout tracking, nutrition, and behavioral insights.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Defined and shipped an MVP for a habit-forming wellness app, integrating APIs for workout tracking and nutrition.</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Clear MVP scope; accelerated learning and pilot traction.</li>
             </ul>
           </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
             <h3 className="font-medium">Publer — Global SaaS Growth & Customer Experience</h3>
             <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">2021 – 2023 | Tirana, Albania</p>
-            <p className="mt-2 text-sm text-[var(--color-muted-foreground)] italic">Global SaaS platform empowering 300K+ users to manage their digital presence</p>
             <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Rapidly growing SaaS with 300K+ users globally, needing social media management products.</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built and led the CX team, introduced a customer-first framework, and improved onboarding and feedback loops for key features.</li>
@@ -156,7 +155,7 @@ export default function Home() {
             <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Dec 2023 – Jan 2024 | New York, Remote</p>
             <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Early-stage founders needed structured validation for new product concepts.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Designed and led a product discovery sprint, conducting user interviews, usability tests, and insight synthesis to refine market positioning.</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led product discovery, conducting user interviews, usability tests, and insight synthesis to refine market positioning.</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Clear MVP scope; accelerated learning and pilot traction.</li>
             </ul>
           </div>
@@ -172,7 +171,7 @@ export default function Home() {
             <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
               <li><span className="font-medium text-[var(--color-foreground)]">Focus:</span> Computer & Data Science, AI, Product Management</li>
               <li><span className="font-medium text-[var(--color-foreground)]">Key Projects:</span> AI-powered cooking assistant SaaS, ML model to predict customer churn</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> ASEM President, Doerr Leadership Coaching, oSTEM Mentor, Fulbright</li>
+              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> President of American Society of Eng Managers, Doerr Leadership Coaching, oSTEM Mentor</li>
             </ul>
           </div>
           <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
