@@ -29,7 +29,7 @@ const COMMUNITY_ITEMS = [
 {
   title: "Doerr Leadership Coaching",
   description: "Leadership development program",
-  link: null
+  link: "https://doerr.rice.edu/"
 },
 {
   title: "oSTEM Mentor",
