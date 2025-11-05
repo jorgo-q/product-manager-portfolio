@@ -69,8 +69,8 @@ export default function ExperiencesPage() {
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
               Experiences
             </h1>
-            <p className="text-lg text-[var(--color-muted-foreground)] mb-2">
-              Work in Progress — Under Design
+            <p className="text-lg text-[var(--color-muted-foreground)] mb-2 !whitespace-pre-line">Under construction 🚧 
+
             </p>
             <p className="text-base text-[var(--color-muted-foreground)] max-w-2xl mx-auto">
               Exploring the world through cycling, running, dancing, and building products across continents
