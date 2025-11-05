@@ -181,7 +181,7 @@ export default function ExperiencesPage() {
                     href="#blue-pin"
                     x={`${loc.x}%`}
                     y={`${loc.y}%`}
-                    className="cursor-pointer transition-transform hover:scale-125"
+                    className="cursor-pointer"
                     onMouseEnter={() => setHoveredPin(loc)}
                     onMouseLeave={() => setHoveredPin(null)}
                   />
@@ -194,7 +194,7 @@ export default function ExperiencesPage() {
                     href="#purple-pin"
                     x={`${loc.x}%`}
                     y={`${loc.y}%`}
-                    className="cursor-pointer transition-transform hover:scale-125"
+                    className="cursor-pointer"
                     onMouseEnter={() => setHoveredPin(loc)}
                     onMouseLeave={() => setHoveredPin(null)}
                   />
