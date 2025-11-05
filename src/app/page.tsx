@@ -77,8 +77,8 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="font-semibold tracking-tight">
-            Jorgo Qirjaj
+          <a href="#top" className="font-semibold tracking-tight">JQ
+
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             {NAV.map((item) =>
@@ -128,11 +128,11 @@ export default function Home() {
 
         {/* Bottom Content */}
         <div className="pb-12 flex flex-col items-center gap-6 max-w-2xl">
-          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed">
-            Hi, I'm Jorgo Qirjaj, a Product Manager passionate about building
-            practical and human-centered software. I combine engineering
-            thinking with empathy to create products that solve real problems
-            and scale globally.
+          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed !whitespace-pre-line">Hi, I'm Jorgo, a Product Manager passionate about building practical and human-centered software. I combine engineering thinking with empathy to create products that solve real problems and scale globally.
+
+
+
+
           </p>
           <p className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
             <MapPin size={16} /> Houston, Texas
