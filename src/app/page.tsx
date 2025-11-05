@@ -5,56 +5,56 @@ import { ArrowUpRight, Mail, Linkedin, MapPin, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const NAV = [
-  { href: "#about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "#building-community", label: "Building Community" },
-  { href: "#contact", label: "Contact" },
-];
+{ href: "#about", label: "About" },
+{ href: "/projects", label: "Projects" },
+{ href: "#building-community", label: "Building Community" },
+{ href: "#contact", label: "Contact" }];
+
 
 const ROTATING_TITLES = [
-  "Product Manager",
-  "Product Strategist",
-  "AI Product Creator",
-  "Engineering Manager",
-];
+"Product Manager",
+"Product Strategist",
+"AI Product Creator",
+"Engineering Manager"];
+
 
 const COMMUNITY_ITEMS = [
-  {
-    title: "President of ASEM",
-    description: "American Society of Engineering Managers",
-    link: null,
-  },
-  {
-    title: "Doerr Leadership Coaching",
-    description: "Leadership development program",
-    link: null,
-  },
-  {
-    title: "oSTEM Mentor",
-    description: "Mentoring LGBTQ+ students in STEM",
-    link: null,
-  },
-  {
-    title: "President of TEDxAUBG",
-    description: "Ideas worth spreading in Bulgaria",
-    link: "https://www.tedxaubg.com/",
-  },
-  {
-    title: "Broadway Club Choreographer",
-    description: "Musical theater production and choreography",
-    link: null,
-  },
-  {
-    title: "Oxford Summer School",
-    description: "Advanced academic program",
-    link: null,
-  },
-  {
-    title: "Sunride Albania",
-    description: "Community cycling initiative",
-    link: "https://sunride.al/",
-  },
-];
+{
+  title: "President of ASEM",
+  description: "American Society of Engineering Managers",
+  link: null
+},
+{
+  title: "Doerr Leadership Coaching",
+  description: "Leadership development program",
+  link: null
+},
+{
+  title: "oSTEM Mentor",
+  description: "Mentoring LGBTQ+ students in STEM",
+  link: null
+},
+{
+  title: "President of TEDxAUBG",
+  description: "Ideas worth spreading in Bulgaria",
+  link: "https://www.tedxaubg.com/"
+},
+{
+  title: "Broadway Club Choreographer",
+  description: "Musical theater production and choreography",
+  link: null
+},
+{
+  title: "Oxford Summer School",
+  description: "Advanced academic program",
+  link: null
+},
+{
+  title: "Sunride Albania",
+  description: "Community cycling initiative",
+  link: "https://sunride.al/"
+}];
+
 
 export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -81,27 +81,27 @@ export default function Home() {
             Jorgo Qirjaj
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            {NAV.map((item) => (
-              item.href.startsWith("/") ? (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                >
+            {NAV.map((item) =>
+            item.href.startsWith("/") ?
+            <Link
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity">
+
                   {item.label}
-                </Link>
-              ) : (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="hover:opacity-70 transition-opacity"
-                >
+                </Link> :
+
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:opacity-70 transition-opacity">
+
                   {item.label}
                 </a>
-              )
-            ))}
+
+            )}
           </nav>
         </div>
       </header>
@@ -116,11 +116,11 @@ export default function Home() {
             Jorgo Qirjaj
           </h1>
           <div className="mt-6 h-12 sm:h-16 flex items-center justify-center">
-            <p 
+            <p
               className={`text-2xl sm:text-3xl md:text-4xl text-[var(--color-muted-foreground)] transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-              }`}
-            >
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`
+              }>
+
               {ROTATING_TITLES[currentTitleIndex]}
             </p>
           </div>
@@ -141,16 +141,16 @@ export default function Home() {
             <Link
               href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
               <Linkedin size={16} /> LinkedIn
               <ArrowUpRight size={16} className="opacity-70" />
             </Link>
             <Link
               href="https://github.com/jorgo-q"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
               <Github size={16} /> GitHub
               <ArrowUpRight size={16} className="opacity-70" />
             </Link>
@@ -158,8 +158,8 @@ export default function Home() {
               href="/JQ_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-            >
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
+
               View CV <ArrowUpRight size={16} className="opacity-70" />
             </a>
           </div>
@@ -185,8 +185,8 @@ export default function Home() {
                 href="/projects"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium"
-              >
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium">
+
                 Projects
                 <ArrowUpRight size={18} />
               </Link>
@@ -196,8 +196,8 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover w-full h-auto"
-            />
+              className="object-cover !w-[99.6%] !h-[409px] !max-w-[99.6%]" />
+
           </div>
         </div>
       </section>
@@ -206,18 +206,18 @@ export default function Home() {
       <section id="building-community" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <h2 className="text-lg font-medium mb-8">Building Community</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {COMMUNITY_ITEMS.map((item, index) => (
-            <div
-              key={index}
-              className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]"
-            >
-              {item.link ? (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+          {COMMUNITY_ITEMS.map((item, index) =>
+          <div
+            key={index}
+            className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
+
+              {item.link ?
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block">
+
                   <h3 className="font-semibold text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
                     {item.title}
                     <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -225,17 +225,17 @@ export default function Home() {
                   <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
                     {item.description}
                   </p>
-                </a>
-              ) : (
-                <>
+                </a> :
+
+            <>
                   <h3 className="font-semibold text-base">{item.title}</h3>
                   <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
                     {item.description}
                   </p>
                 </>
-              )}
+            }
             </div>
-          ))}
+          )}
         </div>
       </section>
 
@@ -251,8 +251,8 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
               href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors"
-            >
+              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors">
+
               <Mail size={20} />
               qirjaj.jorgo@gmail.com
             </a>
@@ -260,8 +260,8 @@ export default function Home() {
             <Link
               href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
               target="_blank"
-              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors"
-            >
+              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors">
+
               <Linkedin size={20} />
               LinkedIn
               <ArrowUpRight size={16} className="opacity-70" />
@@ -283,6 +283,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
