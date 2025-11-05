@@ -5,59 +5,57 @@ import { ArrowUpRight, Mail, Linkedin, MapPin, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const NAV = [
-{ href: "#about", label: "About" },
-{ href: "/projects", label: "Projects" },
-{ href: "#building-community", label: "Building Community" },
-{ href: "/experiences", label: "Experiences" },
-{ href: "#contact", label: "Contact" }];
-
-
-const ROTATING_TITLES = [
-"Product Manager",
-"Product Strategist",
-"AI Product Creator",
-"Product Consultant",
-"Engineering Manager",
+  { href: "#about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "#building-community", label: "Building Community" },
+  { href: "#contact", label: "Contact" }
 ];
 
+const ROTATING_TITLES = [
+  "Product Manager",
+  "Product Strategist",
+  "AI Product Creator",
+  "Product Consultant",
+  "Engineering Manager",
+];
 
 const COMMUNITY_ITEMS = [
-{
-  title: "President of ASEM",
-  description: "American Society of Eng Managers",
-  link: "https://asem.org/"
-},
-{
-  title: "Doerr Leadership Coaching",
-  description: "Leadership development program",
-  link: "https://doerr.rice.edu/"
-},
-{
-  title: "oSTEM Mentor",
-  description: "Mentoring queer students in STEM",
-  link: "https://ostem.org/"
-},
-{
-  title: "President of TEDxAUBG",
-  description: "Ideas worth spreading in Bulgaria",
-  link: "https://www.tedxaubg.com/"
-},
-{
-  title: "Broadway Club Choreographer",
-  description: "Musical production and choreography",
-  link: "https://www.youtube.com/watch?v=KTMeuTJa7iM"
-},
-{
-  title: "Oxford Summer School",
-  description: "Advanced business/econ program",
-  link: null
-},
-{
-  title: "Rhythm Cycling Coach @ Sunride",
-  description: "Fitness & cycling community",
-  link: "https://www.instagram.com/sunride.al"
-}];
-
+  {
+    title: "President of ASEM",
+    description: "American Society of Eng Managers",
+    link: "https://asem.org/"
+  },
+  {
+    title: "Doerr Leadership Coaching",
+    description: "Leadership development program",
+    link: "https://doerr.rice.edu/"
+  },
+  {
+    title: "oSTEM Mentor",
+    description: "Mentoring queer students in STEM",
+    link: "https://ostem.org/"
+  },
+  {
+    title: "President of TEDxAUBG",
+    description: "Ideas worth spreading in Bulgaria",
+    link: "https://www.tedxaubg.com/"
+  },
+  {
+    title: "Broadway Club Choreographer",
+    description: "Musical production and choreography",
+    link: "https://www.youtube.com/watch?v=KTMeuTJa7iM"
+  },
+  {
+    title: "Oxford Summer School",
+    description: "Advanced business/econ program",
+    link: null
+  },
+  {
+    title: "Rhythm Cycling Coach @ Sunride",
+    description: "Fitness & cycling community",
+    link: "https://www.instagram.com/sunride.al"
+  }
+];
 
 export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -85,23 +83,21 @@ export default function Home() {
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             {NAV.map((item) =>
-            item.href.startsWith("/") ?
-            <Link
-              key={item.href}
-              href={item.href}
-              className="hover:opacity-70 transition-opacity">
+              item.href.startsWith("/") ?
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="hover:opacity-70 transition-opacity">
 
-                  {item.label}
-                </Link> :
+                    {item.label}
+                  </Link> :
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="hover:opacity-70 transition-opacity">
 
-            <a
-              key={item.href}
-              href={item.href}
-              className="hover:opacity-70 transition-opacity">
-
-                  {item.label}
-                </a>
-
+                    {item.label}
+                  </a>
             )}
           </nav>
         </div>
@@ -205,33 +201,32 @@ export default function Home() {
         <h2 className="text-lg font-medium mb-8">Building Community</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {COMMUNITY_ITEMS.map((item, index) =>
-          <div
-            key={index}
-            className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
+            <div
+              key={index}
+              className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
 
-              {item.link ?
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block">
+                {item.link ?
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block">
 
-                  <h3 className="font-semibold text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
-                    {item.title}
-                    <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line !whitespace-pre-line">
-                    {item.description}
-                  </p>
-                </a> :
-
-            <>
-                  <h3 className="font-semibold text-base">{item.title}</h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
-                    {item.description}
-                  </p>
-                </>
-            }
+                    <h3 className="font-semibold text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
+                      {item.title}
+                      <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </h3>
+                    <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line !whitespace-pre-line">
+                      {item.description}
+                    </p>
+                  </a> :
+                  <>
+                    <h3 className="font-semibold text-base">{item.title}</h3>
+                    <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
+                      {item.description}
+                    </p>
+                  </>
+                }
             </div>
           )}
         </div>
