@@ -245,7 +245,7 @@ export default function Home() {
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
             Get in touch
           </h2>
-          <p className="text-lg text-[var(--color-muted-foreground)] mb-12 leading-relaxed !whitespace-pre-line !whitespace-pre-line">I'm always open to exploring new product opportunities, partnerships, or consulting about technology and innovation.
+          <p className="text-lg text-[var(--color-muted-foreground)] mb-12 leading-relaxed !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line">I'm always open to exploring new product opportunities or consulting on tech and innovation.
 
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
