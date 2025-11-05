@@ -30,7 +30,7 @@ const HOBBY_LOCATIONS = [
 
 const WORK_STUDY_LOCATIONS = [
 { country: "Albania", flag: "🇦🇱", details: "Publer, EasyPay", type: "work", x: 52, y: 43 },
-{ country: "Ireland", flag: "🇮🇪", details: "Trainly", type: "work", x: 46.5, y: 36 },
+{ country: "Ireland", flag: "🇮🇪", details: "Trainly", type: "work", x: 20, y: 10 },
 { country: "New York", flag: "🇺🇸", details: "Redocs", type: "work", x: 26.5, y: 39 },
 { country: "Houston", flag: "🇺🇸", details: "Rice University", type: "study", x: 22, y: 47 },
 { country: "Bulgaria", flag: "🇧🇬", details: "AUBG", type: "study", x: 54, y: 43 }];
