@@ -50,8 +50,8 @@ const COMMUNITY_ITEMS = [
   link: null
 },
 {
-  title: "Sunride Albania",
-  description: "Rhythm cycling community",
+  title: "Rhythm Cycling Coach @ Sunride",
+  description: "Fitness & cycling community",
   link: "https://sunride.al/"
 }];
 
