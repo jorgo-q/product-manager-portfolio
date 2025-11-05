@@ -80,93 +80,113 @@ export default function ExperiencesPage() {
           {/* Legend */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded-full bg-blue-500"></div>
-              <span className="text-sm text-[var(--color-muted-foreground)]">Hobbies & Travel</span>
+              <div className="text-2xl">📍</div>
+              <span className="text-sm text-[var(--color-muted-foreground)]" style={{ color: '#3b82f6' }}>Hobbies & Travel</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded-full bg-purple-500"></div>
-              <span className="text-sm text-[var(--color-muted-foreground)]">Work & Study</span>
+              <div className="text-2xl" style={{ filter: 'hue-rotate(180deg)' }}>📍</div>
+              <span className="text-sm text-[var(--color-muted-foreground)]" style={{ color: '#a855f7' }}>Work & Study</span>
             </div>
           </div>
 
           {/* World Map Container */}
           <div className="relative w-full max-w-6xl mx-auto bg-[var(--color-card)] rounded-2xl border border-[var(--color-border)] p-8 overflow-hidden">
             <div className="relative w-full" style={{ paddingBottom: "56%" }}>
-              {/* World Map SVG with proper outlines */}
+              {/* World Map SVG with accurate outlines */}
               <svg
                 viewBox="0 0 1000 560"
                 className="absolute inset-0 w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
-                  <style>{`
-                    .land { 
-                      fill: var(--color-muted); 
-                      stroke: var(--color-foreground); 
-                      stroke-width: 1.5; 
-                      opacity: 0.3;
-                    }
-                  `}</style>
+                  {/* Pin marker definition for blue (hobbies) */}
+                  <g id="blue-pin">
+                    <path
+                      d="M 0,-20 C -5.5,-20 -10,-15.5 -10,-10 C -10,-5 0,0 0,10 C 0,0 10,-5 10,-10 C 10,-15.5 5.5,-20 0,-20 Z"
+                      fill="#3b82f6"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
+                    />
+                    <circle cx="0" cy="-10" r="3" fill="white" />
+                  </g>
+                  
+                  {/* Pin marker definition for purple (work/study) */}
+                  <g id="purple-pin">
+                    <path
+                      d="M 0,-20 C -5.5,-20 -10,-15.5 -10,-10 C -10,-5 0,0 0,10 C 0,0 10,-5 10,-10 C 10,-15.5 5.5,-20 0,-20 Z"
+                      fill="#a855f7"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
+                    />
+                    <circle cx="0" cy="-10" r="3" fill="white" />
+                  </g>
                 </defs>
 
-                {/* Improved continent outlines based on actual geography */}
-                <g className="land">
+                {/* Accurate world map outline */}
+                <g fill="none" stroke="var(--color-muted-foreground)" strokeWidth="1" opacity="0.2">
                   {/* North America */}
-                  <path d="M 50 220 L 60 180 L 80 160 L 100 150 L 120 140 L 140 145 L 160 150 L 180 160 L 200 180 L 210 200 L 220 220 L 230 240 L 235 260 L 230 280 L 220 300 L 210 310 L 190 320 L 170 325 L 150 320 L 130 310 L 110 300 L 95 290 L 85 280 L 75 260 L 65 240 L 55 230 Z M 160 320 L 170 340 L 175 360 L 180 380 L 175 400 L 165 410 L 150 415 L 135 410 L 125 395 L 120 375 L 125 355 L 135 340 L 145 330 Z" />
+                  <path d="M 80,180 L 90,150 L 110,140 L 130,135 L 150,140 L 170,155 L 190,175 L 210,200 L 220,230 L 215,260 L 200,280 L 180,290 L 160,285 L 140,270 L 120,250 L 100,220 Z" />
+                  
+                  {/* Central America */}
+                  <path d="M 160,285 L 170,300 L 175,315 L 172,325 L 165,330 L 158,325 L 155,310 Z" />
                   
                   {/* South America */}
-                  <path d="M 240 350 L 250 330 L 265 325 L 280 330 L 290 345 L 295 365 L 300 385 L 305 405 L 310 425 L 310 445 L 305 465 L 295 480 L 280 490 L 265 495 L 250 490 L 240 480 L 230 465 L 225 445 L 220 425 L 220 405 L 225 385 L 230 370 Z" />
+                  <path d="M 175,315 L 190,320 L 210,335 L 225,360 L 235,390 L 240,420 L 235,445 L 220,460 L 200,465 L 185,455 L 175,435 L 170,405 L 168,375 L 170,345 Z" />
                   
                   {/* Europe */}
-                  <path d="M 460 190 L 475 185 L 490 180 L 505 185 L 520 195 L 530 210 L 535 225 L 530 240 L 520 250 L 505 255 L 490 255 L 475 250 L 465 240 L 460 225 L 458 210 Z M 440 215 L 445 205 L 455 200 L 465 205 L 470 215 L 465 225 L 455 230 L 445 225 Z M 475 175 L 485 170 L 495 175 L 500 185 L 495 195 L 485 200 L 475 195 Z" />
+                  <path d="M 460,180 L 475,170 L 495,165 L 515,170 L 535,185 L 545,205 L 540,225 L 525,235 L 505,235 L 485,225 L 470,210 L 465,190 Z" />
                   
                   {/* Africa */}
-                  <path d="M 485 280 L 500 275 L 515 275 L 530 280 L 545 290 L 555 305 L 565 325 L 570 345 L 575 365 L 575 385 L 570 405 L 560 420 L 545 430 L 530 435 L 515 435 L 500 430 L 485 420 L 475 405 L 470 385 L 470 365 L 472 345 L 475 325 L 478 305 L 482 290 Z" />
+                  <path d="M 480,250 L 500,245 L 525,250 L 545,265 L 560,290 L 570,320 L 575,355 L 575,385 L 565,415 L 545,435 L 520,440 L 495,435 L 475,415 L 465,385 L 463,350 L 468,315 L 475,280 Z" />
                   
                   {/* Asia */}
-                  <path d="M 545 170 L 565 165 L 585 160 L 605 158 L 625 160 L 645 165 L 665 172 L 685 180 L 705 190 L 720 200 L 735 215 L 745 230 L 750 245 L 748 260 L 740 275 L 725 285 L 710 290 L 695 292 L 680 290 L 665 285 L 650 280 L 635 275 L 620 270 L 605 260 L 590 250 L 575 240 L 565 230 L 555 215 L 548 200 L 545 185 Z M 760 220 L 775 215 L 790 220 L 800 235 L 805 250 L 800 265 L 785 275 L 770 275 L 760 265 L 755 250 L 758 235 Z" />
+                  <path d="M 550,170 L 580,160 L 620,155 L 660,160 L 700,175 L 735,195 L 760,220 L 770,245 L 765,270 L 745,285 L 715,290 L 680,285 L 645,275 L 610,260 L 580,240 L 560,215 L 550,190 Z" />
+                  
+                  {/* Middle East */}
+                  <path d="M 545,235 L 560,240 L 580,255 L 595,275 L 590,290 L 575,295 L 560,290 L 550,275 L 545,255 Z" />
+                  
+                  {/* India */}
+                  <path d="M 650,275 L 665,270 L 680,275 L 690,295 L 692,320 L 685,340 L 670,350 L 655,345 L 645,325 L 643,300 Z" />
+                  
+                  {/* Southeast Asia */}
+                  <path d="M 700,310 L 715,305 L 730,310 L 740,325 L 735,340 L 720,345 L 705,340 L 698,325 Z" />
                   
                   {/* Australia */}
-                  <path d="M 755 390 L 770 385 L 790 385 L 810 390 L 825 400 L 835 415 L 840 430 L 835 445 L 820 455 L 800 460 L 780 458 L 765 450 L 755 435 L 750 420 L 752 405 Z" />
+                  <path d="M 730,385 L 760,380 L 790,385 L 815,400 L 830,420 L 835,445 L 825,465 L 800,475 L 770,475 L 745,465 L 725,445 L 720,420 L 725,400 Z" />
                   
-                  {/* Antarctica (bottom) */}
-                  <path d="M 100 520 L 900 520 L 900 545 L 100 545 Z" opacity="0.2" />
+                  {/* Greenland */}
+                  <path d="M 380,90 L 410,85 L 440,95 L 455,115 L 450,140 L 430,150 L 405,145 L 385,130 L 380,110 Z" />
+                  
+                  {/* Antarctica */}
+                  <path d="M 100,520 L 900,520 L 900,540 L 100,540 Z" opacity="0.1" />
                 </g>
 
                 {/* Hobby Pins (Blue) */}
                 {HOBBY_LOCATIONS.map((location, index) => (
-                  <g key={`hobby-${index}`}>
-                    <circle
-                      cx={location.x * 10}
-                      cy={location.y * 10}
-                      r="10"
-                      fill="#3b82f6"
-                      stroke="white"
-                      strokeWidth="2.5"
-                      className="cursor-pointer transition-all hover:scale-125"
-                      style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))" }}
-                      onMouseEnter={() => setHoveredPin(location)}
-                      onMouseLeave={() => setHoveredPin(null)}
-                    />
-                  </g>
+                  <use
+                    key={`hobby-${index}`}
+                    href="#blue-pin"
+                    x={location.x * 10}
+                    y={location.y * 10}
+                    className="cursor-pointer transition-transform hover:scale-125"
+                    onMouseEnter={() => setHoveredPin(location)}
+                    onMouseLeave={() => setHoveredPin(null)}
+                  />
                 ))}
 
                 {/* Work/Study Pins (Purple) */}
                 {WORK_STUDY_LOCATIONS.map((location, index) => (
-                  <g key={`work-${index}`}>
-                    <circle
-                      cx={location.x * 10}
-                      cy={location.y * 10}
-                      r="10"
-                      fill="#a855f7"
-                      stroke="white"
-                      strokeWidth="2.5"
-                      className="cursor-pointer transition-all hover:scale-125"
-                      style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))" }}
-                      onMouseEnter={() => setHoveredPin(location)}
-                      onMouseLeave={() => setHoveredPin(null)}
-                    />
-                  </g>
+                  <use
+                    key={`work-${index}`}
+                    href="#purple-pin"
+                    x={location.x * 10}
+                    y={location.y * 10}
+                    className="cursor-pointer transition-transform hover:scale-125"
+                    onMouseEnter={() => setHoveredPin(location)}
+                    onMouseLeave={() => setHoveredPin(null)}
+                  />
                 ))}
               </svg>
 
