@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight, Mail, Linkedin, MapPin, Github } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const NAV = [
   { href: "#about", label: "About" },
@@ -11,11 +12,33 @@ const NAV = [
   { href: "#contact", label: "Contact" },
 ];
 
+const ROTATING_TITLES = [
+  "Product Manager",
+  "Product Strategist",
+  "AI Product Creator",
+  "Engineering Leader",
+];
+
 export default function Home() {
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentTitleIndex((prev) => (prev + 1) % ROTATING_TITLES.length);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-dvh bg-[var(--color-background)] text-[var(--color-foreground)]">
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-[var(--color-border)]">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
           <a href="#top" className="font-semibold tracking-tight">
             Jorgo Qirjaj
@@ -34,54 +57,62 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section id="top" className="relative">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,oklch(0.97_0_0),transparent_60%)]" />
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
-          <div className="max-w-xl">
-            <p className="text-sm uppercase tracking-widest text-[var(--color-muted-foreground)]">
-              Product management
+      {/* Hero - Full Screen */}
+      <section id="top" className="relative h-screen flex flex-col items-center justify-center px-6">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_50%,oklch(0.97_0_0),transparent_60%)]" />
+        
+        {/* Centered Content */}
+        <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight">
+            Jorgo Qirjaj
+          </h1>
+          <div className="mt-6 h-12 sm:h-16 flex items-center justify-center">
+            <p 
+              className={`text-2xl sm:text-3xl md:text-4xl text-[var(--color-muted-foreground)] transition-all duration-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+              }`}
+            >
+              {ROTATING_TITLES[currentTitleIndex]}
             </p>
-            <h1 className="mt-3 text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight sm:text-balance !w-[746px] !h-[62px] !whitespace-pre-line">
-              Jorgo Qirjaj
-            </h1>
-            <p className="mt-3 flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
-              <MapPin size={16} /> Houston, Texas
-            </p>
-            <div className="mt-5 text-base text-[var(--color-muted-foreground)] leading-relaxed space-y-3 text-pretty sm:text-pretty">
-              <p>
-                Hi, I'm Jorgo Qirjaj, a Product Manager passionate about building
-                practical and human-centered software. I combine engineering
-                thinking with empathy to create products that solve real problems
-                and scale globally.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
-                target="_blank"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-              >
-                <Linkedin size={16} /> LinkedIn
-                <ArrowUpRight size={16} className="opacity-70" />
-              </Link>
-              <Link
-                href="https://github.com/jorgo-q"
-                target="_blank"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-              >
-                <Github size={16} /> GitHub
-                <ArrowUpRight size={16} className="opacity-70" />
-              </Link>
-              <a
-                href="/JQ_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
-              >
-                View CV <ArrowUpRight size={16} className="opacity-70" />
-              </a>
-            </div>
+          </div>
+        </div>
+
+        {/* Bottom Content */}
+        <div className="pb-12 flex flex-col items-center gap-6 max-w-2xl">
+          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed">
+            Hi, I'm Jorgo Qirjaq, a Product Manager passionate about building
+            practical and human-centered software. I combine engineering
+            thinking with empathy to create products that solve real problems
+            and scale globally.
+          </p>
+          <p className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
+            <MapPin size={16} /> Houston, Texas
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+            >
+              <Linkedin size={16} /> LinkedIn
+              <ArrowUpRight size={16} className="opacity-70" />
+            </Link>
+            <Link
+              href="https://github.com/jorgo-q"
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+            >
+              <Github size={16} /> GitHub
+              <ArrowUpRight size={16} className="opacity-70" />
+            </Link>
+            <a
+              href="/JQ_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors"
+            >
+              View CV <ArrowUpRight size={16} className="opacity-70" />
+            </a>
           </div>
         </div>
       </section>
