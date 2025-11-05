@@ -77,7 +77,7 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="font-semibold tracking-tight">JQ
+          <a href="#top" className="font-semibold tracking-tight !whitespace-pre-line">JQ
 
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
