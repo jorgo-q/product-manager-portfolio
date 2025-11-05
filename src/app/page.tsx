@@ -41,7 +41,7 @@ const COMMUNITY_ITEMS = [
 },
 {
   title: "Broadway Club Choreographer",
-  description: "Musical theater production and choreography",
+  description: "Musical production and choreography",
   link: null
 },
 {
@@ -51,7 +51,7 @@ const COMMUNITY_ITEMS = [
 },
 {
   title: "Sunride Albania",
-  description: "Community cycling initiative",
+  description: "Rhythm cycling community",
   link: "https://sunride.al/"
 }];
 
@@ -222,7 +222,7 @@ export default function Home() {
                     {item.title}
                     <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
+                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
                     {item.description}
                   </p>
                 </a> :
