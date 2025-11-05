@@ -8,6 +8,7 @@ const NAV = [
 { href: "#about", label: "About" },
 { href: "/projects", label: "Projects" },
 { href: "#building-community", label: "Building Community" },
+{ href: "/experiences", label: "Experiences" },
 { href: "#contact", label: "Contact" }];
 
 
@@ -69,7 +70,7 @@ export default function Home() {
         setCurrentTitleIndex((prev) => (prev + 1) % ROTATING_TITLES.length);
         setIsVisible(true);
       }, 500);
-    }, 3000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -88,8 +89,6 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity">
 
                   {item.label}
@@ -185,10 +184,7 @@ export default function Home() {
             <div className="mt-6">
               <Link
                 href="/projects"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium">
-
                 Projects
                 <ArrowUpRight size={18} />
               </Link>
