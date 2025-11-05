@@ -72,8 +72,8 @@ export default function ExperiencesPage() {
             <p className="text-lg text-[var(--color-muted-foreground)] mb-2 !whitespace-pre-line">Under construction 🚧 
 
             </p>
-            <p className="text-base text-[var(--color-muted-foreground)] max-w-2xl mx-auto">
-              Exploring the world through cycling, running, dancing, and building products across continents
+            <p className="text-base text-[var(--color-muted-foreground)] max-w-2xl mx-auto !whitespace-pre-line">Exploring the world through cycling, running, dancing, and building products.
+
             </p>
           </div>
 
