@@ -8,13 +8,13 @@ const PROJECTS = [
     id: "rehub",
     title: "ReHub Compliance Automation",
     company: "Redocs",
-    period: "Dec 2024 – Aug 2025",
+    period: "Dec 2024 – Present",
     location: "NYC, Remote",
     description: "AI-powered compliance portal for real estate building managers",
     problem: "Real estate building managers struggling with manual compliance tracking.",
     solution: "Built an AI-powered compliance portal using Claude AI, to automate compliance and invoice management.",
     impact: "Cut manual reporting time and improved client satisfaction for 40K+ NYC buildings.",
-    tags: ["AI/ML", "Compliance", "Real Estate Tech"],
+    tags: ["AI", "Compliance", "Real Estate Tech"],
   },
   {
     id: "openbanking",
@@ -37,7 +37,7 @@ const PROJECTS = [
     description: "Habit-forming wellness app with workout tracking and nutrition",
     problem: "Users struggled to maintain consistent workout habits and track workout progress.",
     solution: "Defined and shipped an MVP for a habit-forming wellness app, integrating APIs for workout tracking and nutrition.",
-    impact: "Clear MVP scope; accelerated learning and pilot traction.",
+    impact: "Clear and validated MVP scope.",
     tags: ["Mobile", "Health Tech", "MVP"],
   },
   {
@@ -61,7 +61,7 @@ const PROJECTS = [
     description: "Structured product validation for early-stage founders",
     problem: "Early-stage founders needed structured validation for new product concepts.",
     solution: "Led product discovery, conducting user interviews, usability tests, and insight synthesis to refine market positioning.",
-    impact: "Clear MVP scope; accelerated learning and pilot traction.",
+    impact: "Well researched, tested, and validated product offering.",
     tags: ["Product Discovery", "User Research", "Validation"],
   },
 ];
