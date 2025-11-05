@@ -22,7 +22,7 @@ const COMMUNITY_ITEMS = [
 {
   title: "President of ASEM",
   description: "American Society of Eng Managers",
-  link: null
+  link: "https://asem.org/"
 },
 {
   title: "Doerr Leadership Coaching",
@@ -32,7 +32,7 @@ const COMMUNITY_ITEMS = [
 {
   title: "oSTEM Mentor",
   description: "Mentoring LGBTQ+ students in STEM",
-  link: null
+  link: "https://ostem.org/"
 },
 {
   title: "President of TEDxAUBG",
@@ -42,7 +42,7 @@ const COMMUNITY_ITEMS = [
 {
   title: "Broadway Club Choreographer",
   description: "Musical production and choreography",
-  link: null
+  link: "https://www.youtube.com/watch?v=KTMeuTJa7iM"
 },
 {
   title: "Oxford Summer School",
@@ -52,7 +52,7 @@ const COMMUNITY_ITEMS = [
 {
   title: "Rhythm Cycling Coach @ Sunride",
   description: "Fitness & cycling community",
-  link: "https://sunride.al/"
+  link: "https://www.instagram.com/sunride.al"
 }];
 
 
@@ -245,26 +245,24 @@ export default function Home() {
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
             Get in touch
           </h2>
-          <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+          <p className="text-lg text-[var(--color-muted-foreground)] mb-12 leading-relaxed">
             I'm always open to discussing product opportunities, partnerships, or just chatting about technology and innovation.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
             <a
               href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors">
-
-              <Mail size={20} />
-              qirjaj.jorgo@gmail.com
+              className="group inline-flex items-center gap-3 text-xl sm:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105">
+              <Mail size={24} className="group-hover:rotate-6 transition-transform" />
+              <span className="font-medium">qirjaj.jorgo@gmail.com</span>
             </a>
-            <span className="hidden sm:inline text-[var(--color-muted-foreground)]">•</span>
+            <span className="hidden sm:inline text-2xl text-[var(--color-muted-foreground)]">•</span>
             <Link
               href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
               target="_blank"
-              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors">
-
-              <Linkedin size={20} />
-              LinkedIn
-              <ArrowUpRight size={16} className="opacity-70" />
+              className="group inline-flex items-center gap-3 text-xl sm:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105">
+              <Linkedin size={24} className="group-hover:rotate-6 transition-transform" />
+              <span className="font-medium">LinkedIn</span>
+              <ArrowUpRight size={18} className="opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
           </div>
           <p className="flex items-center justify-center gap-2 text-sm text-[var(--color-muted-foreground)]">

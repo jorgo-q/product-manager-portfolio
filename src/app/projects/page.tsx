@@ -15,6 +15,7 @@ const PROJECTS = [
     solution: "Built an AI-powered compliance portal using Claude AI, to automate compliance and invoice management.",
     impact: "Cut manual reporting time and improved client satisfaction for 40K+ NYC buildings.",
     tags: ["AI", "Compliance", "Real Estate Tech"],
+    link: "https://www.redocs.com/"
   },
   {
     id: "openbanking",
@@ -27,6 +28,7 @@ const PROJECTS = [
     solution: "Led the development of Albania's first Open Banking services, integrating APIs for real-time account access and direct bank payments.",
     impact: "Enabled new B2B fintech integrations, launched multiple payment features (Pay by Link, loans, donations), and increased CSAT.",
     tags: ["Fintech", "APIs", "Banking"],
+    link: "https://easypay.al/en/openbanking/"
   },
   {
     id: "trainly",
@@ -39,6 +41,7 @@ const PROJECTS = [
     solution: "Defined and shipped an MVP for a habit-forming wellness app, integrating APIs for workout tracking and nutrition.",
     impact: "Clear and validated MVP scope.",
     tags: ["Mobile", "Health Tech", "MVP"],
+    link: null
   },
   {
     id: "publer",
@@ -51,6 +54,7 @@ const PROJECTS = [
     solution: "Built and led the CX team, introduced a customer-first framework, and improved onboarding and feedback loops for key features.",
     impact: "Elevated user experience and increased retention across global markets.",
     tags: ["SaaS", "Customer Experience", "Growth"],
+    link: "https://publer.com/"
   },
   {
     id: "extern",
@@ -63,6 +67,7 @@ const PROJECTS = [
     solution: "Led product discovery, conducting user interviews, usability tests, and insight synthesis to refine market positioning.",
     impact: "Well researched, tested, and validated product offering.",
     tags: ["Product Discovery", "User Research", "Validation"],
+    link: "https://www.extern.com/"
   },
 ];
 
@@ -103,9 +108,23 @@ export default function ProjectsPage() {
               {/* Header */}
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <h2 className="text-xl font-semibold group-hover:text-[var(--color-primary)] transition-colors">
-                    {project.title}
-                  </h2>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 group/link"
+                    >
+                      <h2 className="text-xl font-semibold group-hover/link:text-[var(--color-primary)] transition-colors">
+                        {project.title}
+                      </h2>
+                      <ExternalLink size={16} className="opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                    </a>
+                  ) : (
+                    <h2 className="text-xl font-semibold">
+                      {project.title}
+                    </h2>
+                  )}
                   <p className="text-sm text-[var(--color-muted-foreground)] mt-1">
                     {project.company}
                   </p>
