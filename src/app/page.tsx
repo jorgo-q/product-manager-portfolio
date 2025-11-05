@@ -31,7 +31,7 @@ const COMMUNITY_ITEMS = [
 },
 {
   title: "oSTEM Mentor",
-  description: "Mentoring LGBTQ+ students in STEM",
+  description: "Mentoring queer students in STEM",
   link: "https://ostem.org/"
 },
 {
@@ -222,7 +222,7 @@ export default function Home() {
                     {item.title}
                     <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
+                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line !whitespace-pre-line">
                     {item.description}
                   </p>
                 </a> :
