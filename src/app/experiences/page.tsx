@@ -6,35 +6,35 @@ import { useState } from "react";
 
 // Location data with coordinates (percentages based on actual world map geography)
 const HOBBY_LOCATIONS = [
-  { country: "Albania", flag: "🇦🇱", activity: "cycled", x: 52, y: 43 },
-  { country: "Greece", flag: "🇬🇷", activity: "travel", x: 54, y: 45 },
-  { country: "Bosnia & Herzegovina", flag: "🇧🇦", activity: "travel", x: 51.5, y: 42 },
-  { country: "Montenegro", flag: "🇲🇪", activity: "travel", x: 51.8, y: 43 },
-  { country: "Serbia", flag: "🇷🇸", activity: "travel", x: 52.5, y: 42 },
-  { country: "Bulgaria", flag: "🇧🇬", activity: "danced", x: 54, y: 43 },
-  { country: "Italy", flag: "🇮🇹", activity: "travel", x: 50, y: 43 },
-  { country: "Germany", flag: "🇩🇪", activity: "cycled", x: 50, y: 38 },
-  { country: "Turkey", flag: "🇹🇷", activity: "travel", x: 57, y: 45 },
-  { country: "Spain", flag: "🇪🇸", activity: "ran", x: 47, y: 44 },
-  { country: "Kosovo", flag: "🇽🇰", activity: "ran", x: 52.3, y: 43 },
-  { country: "Switzerland", flag: "🇨🇭", activity: "travel", x: 49.5, y: 40 },
-  { country: "Belgium", flag: "🇧🇪", activity: "ran", x: 48.5, y: 38 },
-  { country: "Portugal", flag: "🇵🇹", activity: "cycled", x: 46, y: 45 },
-  { country: "Massachusetts", flag: "🇺🇸", activity: "travel", x: 27, y: 38 },
-  { country: "New York", flag: "🇺🇸", activity: "travel", x: 26.5, y: 39 },
-  { country: "Texas", flag: "🇺🇸", activity: "travel", x: 22, y: 47 },
-  { country: "Delaware", flag: "🇺🇸", activity: "travel", x: 27, y: 40 },
-  { country: "Pennsylvania", flag: "🇺🇸", activity: "travel", x: 26.8, y: 39.5 },
-  { country: "Maryland", flag: "🇺🇸", activity: "travel", x: 27, y: 40 },
-];
+{ country: "Albania", flag: "🇦🇱", activity: "cycled", x: 52, y: 43 },
+{ country: "Greece", flag: "🇬🇷", activity: "travel", x: 54, y: 45 },
+{ country: "Bosnia & Herzegovina", flag: "🇧🇦", activity: "travel", x: 51.5, y: 42 },
+{ country: "Montenegro", flag: "🇲🇪", activity: "travel", x: 51.8, y: 43 },
+{ country: "Serbia", flag: "🇷🇸", activity: "travel", x: 52.5, y: 42 },
+{ country: "Bulgaria", flag: "🇧🇬", activity: "danced", x: 54, y: 43 },
+{ country: "Italy", flag: "🇮🇹", activity: "travel", x: 50, y: 43 },
+{ country: "Germany", flag: "🇩🇪", activity: "cycled", x: 50, y: 38 },
+{ country: "Turkey", flag: "🇹🇷", activity: "travel", x: 57, y: 45 },
+{ country: "Spain", flag: "🇪🇸", activity: "ran", x: 47, y: 44 },
+{ country: "Kosovo", flag: "🇽🇰", activity: "ran", x: 52.3, y: 43 },
+{ country: "Switzerland", flag: "🇨🇭", activity: "travel", x: 49.5, y: 40 },
+{ country: "Belgium", flag: "🇧🇪", activity: "ran", x: 48.5, y: 38 },
+{ country: "Portugal", flag: "🇵🇹", activity: "cycled", x: 46, y: 45 },
+{ country: "Massachusetts", flag: "🇺🇸", activity: "travel", x: 27, y: 38 },
+{ country: "New York", flag: "🇺🇸", activity: "travel", x: 26.5, y: 39 },
+{ country: "Texas", flag: "🇺🇸", activity: "travel", x: 22, y: 47 },
+{ country: "Delaware", flag: "🇺🇸", activity: "travel", x: 27, y: 40 },
+{ country: "Pennsylvania", flag: "🇺🇸", activity: "travel", x: 26.8, y: 39.5 },
+{ country: "Maryland", flag: "🇺🇸", activity: "travel", x: 27, y: 40 }];
+
 
 const WORK_STUDY_LOCATIONS = [
-  { country: "Albania", flag: "🇦🇱", details: "Publer, EasyPay", type: "work", x: 52, y: 43 },
-  { country: "Ireland", flag: "🇮🇪", details: "Trainly", type: "work", x: 46.5, y: 36 },
-  { country: "New York", flag: "🇺🇸", details: "Redocs", type: "work", x: 26.5, y: 39 },
-  { country: "Houston", flag: "🇺🇸", details: "Rice University", type: "study", x: 22, y: 47 },
-  { country: "Bulgaria", flag: "🇧🇬", details: "AUBG", type: "study", x: 54, y: 43 },
-];
+{ country: "Albania", flag: "🇦🇱", details: "Publer, EasyPay", type: "work", x: 52, y: 43 },
+{ country: "Ireland", flag: "🇮🇪", details: "Trainly", type: "work", x: 46.5, y: 36 },
+{ country: "New York", flag: "🇺🇸", details: "Redocs", type: "work", x: 26.5, y: 39 },
+{ country: "Houston", flag: "🇺🇸", details: "Rice University", type: "study", x: 22, y: 47 },
+{ country: "Bulgaria", flag: "🇧🇬", details: "AUBG", type: "study", x: 54, y: 43 }];
+
 
 interface TooltipData {
   country: string;
@@ -85,8 +85,8 @@ export default function ExperiencesPage() {
                   d="M 10,5 C 5.5,5 2,8.5 2,13 C 2,16.5 10,25 10,30 C 10,25 18,16.5 18,13 C 18,8.5 14.5,5 10,5 Z"
                   fill="#3b82f6"
                   stroke="white"
-                  strokeWidth="1"
-                />
+                  strokeWidth="1" />
+
                 <circle cx="10" cy="13" r="2.5" fill="white" />
               </svg>
               <span className="text-sm text-[var(--color-muted-foreground)]" style={{ color: '#3b82f6' }}>Hobbies & Travel</span>
@@ -97,8 +97,8 @@ export default function ExperiencesPage() {
                   d="M 10,5 C 5.5,5 2,8.5 2,13 C 2,16.5 10,25 10,30 C 10,25 18,16.5 18,13 C 18,8.5 14.5,5 10,5 Z"
                   fill="#a855f7"
                   stroke="white"
-                  strokeWidth="1"
-                />
+                  strokeWidth="1" />
+
                 <circle cx="10" cy="13" r="2.5" fill="white" />
               </svg>
               <span className="text-sm text-[var(--color-muted-foreground)]" style={{ color: '#a855f7' }}>Work & Study</span>
@@ -112,8 +112,8 @@ export default function ExperiencesPage() {
               <svg
                 viewBox="0 0 1000 560"
                 className="absolute inset-0 w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
+
                 <defs>
                   {/* Pin marker definition for blue (hobbies) */}
                   <g id="blue-pin">
@@ -122,8 +122,8 @@ export default function ExperiencesPage() {
                       fill="#3b82f6"
                       stroke="white"
                       strokeWidth="1.5"
-                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
-                    />
+                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))" />
+
                     <circle cx="0" cy="-10" r="3" fill="white" />
                   </g>
                   
@@ -134,8 +134,8 @@ export default function ExperiencesPage() {
                       fill="#a855f7"
                       stroke="white"
                       strokeWidth="1.5"
-                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
-                    />
+                      filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))" />
+
                     <circle cx="0" cy="-10" r="3" fill="white" />
                   </g>
                 </defs>
@@ -148,64 +148,64 @@ export default function ExperiencesPage() {
                   width="1000"
                   height="560"
                   preserveAspectRatio="xMidYMid meet"
-                  opacity="0.6"
-                />
+                  opacity="0.6" />
+
 
                 {/* Hobby Pins (Blue) */}
-                {HOBBY_LOCATIONS.map((location, index) => (
-                  <use
-                    key={`hobby-${index}`}
-                    href="#blue-pin"
-                    x={location.x * 10}
-                    y={location.y * 10}
-                    className="cursor-pointer transition-transform hover:scale-125"
-                    onMouseEnter={() => setHoveredPin(location)}
-                    onMouseLeave={() => setHoveredPin(null)}
-                  />
-                ))}
+                {HOBBY_LOCATIONS.map((location, index) =>
+                <use
+                  key={`hobby-${index}`}
+                  href="#blue-pin"
+                  x={location.x * 10}
+                  y={location.y * 10}
+                  className="cursor-pointer transition-transform hover:scale-125"
+                  onMouseEnter={() => setHoveredPin(location)}
+                  onMouseLeave={() => setHoveredPin(null)} />
+
+                )}
 
                 {/* Work/Study Pins (Purple) */}
-                {WORK_STUDY_LOCATIONS.map((location, index) => (
-                  <use
-                    key={`work-${index}`}
-                    href="#purple-pin"
-                    x={location.x * 10}
-                    y={location.y * 10}
-                    className="cursor-pointer transition-transform hover:scale-125"
-                    onMouseEnter={() => setHoveredPin(location)}
-                    onMouseLeave={() => setHoveredPin(null)}
-                  />
-                ))}
+                {WORK_STUDY_LOCATIONS.map((location, index) =>
+                <use
+                  key={`work-${index}`}
+                  href="#purple-pin"
+                  x={location.x * 10}
+                  y={location.y * 10}
+                  className="cursor-pointer transition-transform hover:scale-125 !w-[NaNpx] !h-[NaNpx]"
+                  onMouseEnter={() => setHoveredPin(location)}
+                  onMouseLeave={() => setHoveredPin(null)} />
+
+                )}
               </svg>
 
               {/* Tooltip */}
-              {hoveredPin && (
-                <div
-                  className="absolute z-10 bg-white dark:bg-gray-800 border border-[var(--color-border)] rounded-lg shadow-lg px-4 py-3 pointer-events-none"
-                  style={{
-                    left: `${hoveredPin.x}%`,
-                    top: `${hoveredPin.y}%`,
-                    transform: "translate(-50%, -120%)",
-                  }}
-                >
+              {hoveredPin &&
+              <div
+                className="absolute z-10 bg-white dark:bg-gray-800 border border-[var(--color-border)] rounded-lg shadow-lg px-4 py-3 pointer-events-none"
+                style={{
+                  left: `${hoveredPin.x}%`,
+                  top: `${hoveredPin.y}%`,
+                  transform: "translate(-50%, -120%)"
+                }}>
+
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <span className="text-2xl">{hoveredPin.flag}</span>
                     <div>
                       <p className="font-semibold text-sm">{hoveredPin.country}</p>
-                      {hoveredPin.activity && (
-                        <p className="text-xs text-[var(--color-muted-foreground)]">
+                      {hoveredPin.activity &&
+                    <p className="text-xs text-[var(--color-muted-foreground)]">
                           {hoveredPin.activity}
                         </p>
-                      )}
-                      {hoveredPin.details && (
-                        <p className="text-xs text-[var(--color-muted-foreground)]">
+                    }
+                      {hoveredPin.details &&
+                    <p className="text-xs text-[var(--color-muted-foreground)]">
                           {hoveredPin.details} ({hoveredPin.type})
                         </p>
-                      )}
+                    }
                     </div>
                   </div>
                 </div>
-              )}
+              }
             </div>
           </div>
 
@@ -225,19 +225,19 @@ export default function ExperiencesPage() {
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-6 text-center">
               <div className="text-3xl font-bold text-blue-500 mb-2">
-                {HOBBY_LOCATIONS.filter(l => l.activity === "cycled").length}
+                {HOBBY_LOCATIONS.filter((l) => l.activity === "cycled").length}
               </div>
               <div className="text-sm text-[var(--color-muted-foreground)]">Cycling Destinations</div>
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-6 text-center">
               <div className="text-3xl font-bold text-blue-500 mb-2">
-                {HOBBY_LOCATIONS.filter(l => l.activity === "ran").length}
+                {HOBBY_LOCATIONS.filter((l) => l.activity === "ran").length}
               </div>
               <div className="text-sm text-[var(--color-muted-foreground)]">Running Spots</div>
             </div>
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>);
+
 }
