@@ -6,9 +6,8 @@ import { useState, useEffect } from "react";
 
 const NAV = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#skills", label: "Skills" },
+  { href: "/projects", label: "Projects" },
+  { href: "#building-community", label: "Building Community" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -17,6 +16,44 @@ const ROTATING_TITLES = [
   "Product Strategist",
   "AI Product Creator",
   "Engineering Manager",
+];
+
+const COMMUNITY_ITEMS = [
+  {
+    title: "President of ASEM",
+    description: "American Society of Engineering Managers",
+    link: null,
+  },
+  {
+    title: "Doerr Leadership Coaching",
+    description: "Leadership development program",
+    link: null,
+  },
+  {
+    title: "oSTEM Mentor",
+    description: "Mentoring LGBTQ+ students in STEM",
+    link: null,
+  },
+  {
+    title: "President of TEDxAUBG",
+    description: "Ideas worth spreading in Bulgaria",
+    link: "https://www.tedxaubg.com/",
+  },
+  {
+    title: "Broadway Club Choreographer",
+    description: "Musical theater production and choreography",
+    link: null,
+  },
+  {
+    title: "Oxford Summer School",
+    description: "Advanced academic program",
+    link: null,
+  },
+  {
+    title: "Sunride Albania",
+    description: "Community cycling initiative",
+    link: "https://sunride.al/",
+  },
 ];
 
 export default function Home() {
@@ -45,13 +82,25 @@ export default function Home() {
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="hover:opacity-70 transition-opacity"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="hover:opacity-70 transition-opacity"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
         </div>
@@ -131,145 +180,96 @@ export default function Home() {
             <p className="mt-4 text-[var(--color-muted-foreground)]">
               Whether I'm leading a sprint planning meeting or building a community outside of work, my focus stays the same -- to build systems that inspire action, collaboration, and progress.
             </p>
+            <div className="mt-6">
+              <Link
+                href="/projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium"
+              >
+                Projects
+                <ArrowUpRight size={18} />
+              </Link>
+            </div>
           </div>
           <div className="rounded-xl overflow-hidden border border-[var(--color-border)]">
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !text-justify !w-[468px] !h-[336px] !max-w-[468px]" />
+              className="object-cover w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">Some of my work</h2>
-        <div className="mt-6 grid gap-4">
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">ReHub Compliance Automation — Redocs</h3>
-            <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Dec 2024 – Aug 2025 | NYC, Remote</p>
-            <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Real estate building managers struggling with manual compliance tracking.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built an AI-powered compliance portal using Claude AI, to automate compliance and invoice management.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Cut manual reporting time and improved client satisfaction for 40K+ NYC buildings.</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Open Banking Platform — EasyPay</h3>
-            <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Mar 2024 – Jul 2025 | Tirana, Albania</p>
-            <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Closed banking systems limited fintech innovation and financial accessibility.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led the development Albania's first Open Banking services, integrating APIs for real-time account access and direct bank payments.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Enabled new B2B fintech integrations, launched multiple payment features (Pay by Link, loans, donations), and increased CSAT.</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Trainly Wellness App — Habit-Building MVP</h3>
-            <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Jan 2024 – Jan 2025 | Ireland, Remote</p>
-            <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Users struggled to maintain consistent workout habits and track workout progress.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Defined and shipped an MVP for a habit-forming wellness app, integrating APIs for workout tracking and nutrition.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Clear MVP scope; accelerated learning and pilot traction.</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Publer — Global SaaS Growth & Customer Experience</h3>
-            <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">2021 – 2023 | Tirana, Albania</p>
-            <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Rapidly growing SaaS with 300K+ users globally, needing social media management products.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Built and led the CX team, introduced a customer-first framework, and improved onboarding and feedback loops for key features.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Elevated user experience and increased retention across global markets.</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Product Discovery Externship — Extern (NYC)</h3>
-            <p className="mt-1 text-xs text-[var(--color-muted-foreground)]">Dec 2023 – Jan 2024 | New York, Remote</p>
-            <ul className="mt-3 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Problem:</span> Early-stage founders needed structured validation for new product concepts.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Solution:</span> Led product discovery, conducting user interviews, usability tests, and insight synthesis to refine market positioning.</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Impact:</span> Clear MVP scope; accelerated learning and pilot traction.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Education */}
-      <section id="education" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">Education</h2>
-        <div className="mt-6 grid gap-4">
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">Master of Engineering Management & Leadership — Rice University</h3>
-            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Focus:</span> Computer & Data Science, AI, Product Management</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Key Projects:</span> AI-powered cooking assistant SaaS, ML model to predict customer churn</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> President of American Society of Eng Managers, Doerr Leadership Coaching, oSTEM Mentor</li>
-            </ul>
-          </div>
-          <div className="rounded-lg border border-[var(--color-border)] p-5 h-full">
-            <h3 className="font-medium">BA in Computer Science — American University in Bulgaria</h3>
-            <ul className="mt-2 text-sm text-[var(--color-muted-foreground)] grid gap-1">
-              <li><span className="font-medium text-[var(--color-foreground)]">Minors:</span> Mathematics & Information Systems</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Key Projects:</span> Neural Network "Snake Game", Big Data & ML in Smart Cities</li>
-              <li><span className="font-medium text-[var(--color-foreground)]">Activities:</span> TEDxAUBG President, Broadway Club Choreographer, Oxford Summer School</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section id="skills" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">Skills & Certifications</h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="!w-[358px] !h-full">
-            <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Certifications</h3>
-            <ul className="mt-3 grid gap-2 text-sm !w-[349px] !h-[130px]">
-              {["Professional Scrum Product Owner I (PSPO I)", "Reforge Product Management", "Becoming a PM"].map((c) =>
-              <li key={c} className="rounded-lg border border-[var(--color-border)] px-3 py-2 !w-full !h-[38px]">
-                  <Link href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/details/certifications/" target="_blank" className="inline-flex items-center gap-2 hover:opacity-80">
-                    <span>{c}</span>
-                    <ArrowUpRight size={14} className="opacity-70" />
-                  </Link>
-                </li>
+      {/* Building Community */}
+      <section id="building-community" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+        <h2 className="text-lg font-medium mb-8">Building Community</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {COMMUNITY_ITEMS.map((item, index) => (
+            <div
+              key={index}
+              className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]"
+            >
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <h3 className="font-semibold text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
+                    {item.title}
+                    <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </h3>
+                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
+                    {item.description}
+                  </p>
+                </a>
+              ) : (
+                <>
+                  <h3 className="font-semibold text-base">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
+                    {item.description}
+                  </p>
+                </>
               )}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-[var(--color-muted-foreground)]">Product Skills</h3>
-            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Roadmapping", "Market Fit", "Discovery", "Stakeholder Management", "A/B Testing"].map((s) =>
-              <li key={s} className="rounded-full border border-[var(--color-border)] px-3 py-1">{s}</li>
-              )}
-            </ul>
-            <h3 className="mt-6 text-sm font-medium text-[var(--color-muted-foreground)]">Tools & Tech</h3>
-            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
-              {["Jira", "Miro", "Figma", "Claude AI", "Python", "SQL"].map((t) =>
-              <li key={t} className="rounded-full border border-[var(--color-border)] px-3 py-1">{t}</li>
-              )}
-            </ul>
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium">Contact</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-4">
-          <a
-            href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
-
-            <Mail size={18} /> <span>qirjaj.jorgo@gmail.com</span>
-          </a>
-          <Link
-            href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
-            target="_blank"
-            className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3 hover:bg-[var(--color-secondary)] transition-colors">
-
-            <Linkedin size={18} /> <span>LinkedIn</span>
-          </Link>
-          <div className="rounded-lg border border-[var(--color-border)] p-4 flex items-center gap-3">
-            <MapPin size={18} /> <span>Houston, Texas</span>
+      <section id="contact" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+            Get in touch
+          </h2>
+          <p className="text-lg text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+            I'm always open to discussing product opportunities, partnerships, or just chatting about technology and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a
+              href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
+              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors"
+            >
+              <Mail size={20} />
+              qirjaj.jorgo@gmail.com
+            </a>
+            <span className="hidden sm:inline text-[var(--color-muted-foreground)]">•</span>
+            <Link
+              href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
+              target="_blank"
+              className="inline-flex items-center gap-2 text-lg hover:text-[var(--color-primary)] transition-colors"
+            >
+              <Linkedin size={20} />
+              LinkedIn
+              <ArrowUpRight size={16} className="opacity-70" />
+            </Link>
           </div>
+          <p className="flex items-center justify-center gap-2 text-sm text-[var(--color-muted-foreground)]">
+            <MapPin size={16} /> Based in Houston, Texas
+          </p>
         </div>
       </section>
 
