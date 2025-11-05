@@ -16,7 +16,7 @@ const ROTATING_TITLES = [
   "Product Manager",
   "Product Strategist",
   "AI Product Creator",
-  "Engineering Leader",
+  "Engineering Manager",
 ];
 
 export default function Home() {
@@ -80,7 +80,7 @@ export default function Home() {
         {/* Bottom Content */}
         <div className="pb-12 flex flex-col items-center gap-6 max-w-2xl">
           <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed">
-            Hi, I'm Jorgo Qirjaq, a Product Manager passionate about building
+            Hi, I'm Jorgo Qirjaj, a Product Manager passionate about building
             practical and human-centered software. I combine engineering
             thinking with empathy to create products that solve real problems
             and scale globally.
