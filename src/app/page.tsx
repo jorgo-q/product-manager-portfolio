@@ -15,7 +15,9 @@ const ROTATING_TITLES = [
 "Product Manager",
 "Product Strategist",
 "AI Product Creator",
-"Engineering Manager"];
+"Product Consultant",
+"Engineering Manager",
+];
 
 
 const COMMUNITY_ITEMS = [
