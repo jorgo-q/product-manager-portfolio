@@ -21,7 +21,7 @@ const ROTATING_TITLES = [
 const COMMUNITY_ITEMS = [
 {
   title: "President of ASEM",
-  description: "American Society of Engineering Managers",
+  description: "American Society of Eng Managers",
   link: null
 },
 {
@@ -46,7 +46,7 @@ const COMMUNITY_ITEMS = [
 },
 {
   title: "Oxford Summer School",
-  description: "Advanced academic program",
+  description: "Advanced business/econ program",
   link: null
 },
 {
@@ -229,7 +229,7 @@ export default function Home() {
 
             <>
                   <h3 className="font-semibold text-base">{item.title}</h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">
+                  <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
                     {item.description}
                   </p>
                 </>
