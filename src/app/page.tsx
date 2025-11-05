@@ -70,7 +70,7 @@ export default function Home() {
         setCurrentTitleIndex((prev) => (prev + 1) % ROTATING_TITLES.length);
         setIsVisible(true);
       }, 500);
-    }, 1000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
