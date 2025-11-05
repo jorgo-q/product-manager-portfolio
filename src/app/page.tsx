@@ -128,7 +128,7 @@ export default function Home() {
 
         {/* Bottom Content */}
         <div className="pb-12 flex flex-col items-center gap-6 max-w-2xl">
-          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed !whitespace-pre-line">Hi, I'm Jorgo, a Product Manager passionate about building practical and human-centered software. I combine engineering thinking with empathy to create products that solve real problems and scale globally.
+          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed !whitespace-pre-line !whitespace-pre-line">Hi, I'm Jorgo, a product manager passionate about building practical and human-centered software. I combine engineering thinking with empathy to create products that solve real problems and scale globally.
 
 
 
