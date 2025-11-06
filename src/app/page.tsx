@@ -5,57 +5,57 @@ import { ArrowUpRight, Mail, Linkedin, MapPin, Github, FileText, Menu, X } from 
 import { useState, useEffect } from "react";
 
 const NAV = [
-  { href: "#about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "#building-community", label: "Building Community" },
-  { href: "#contact", label: "Contact" }
-];
+{ href: "#about", label: "About" },
+{ href: "/projects", label: "Projects" },
+{ href: "#building-community", label: "Building Community" },
+{ href: "#contact", label: "Contact" }];
+
 
 const ROTATING_TITLES = [
-  "Product Manager",
-  "Product Strategist",
-  "AI Product Creator",
-  "Product Consultant",
-  "Engineering Manager",
-];
+"Product Manager",
+"Product Strategist",
+"AI Product Creator",
+"Product Consultant",
+"Engineering Manager"];
+
 
 const COMMUNITY_ITEMS = [
-  {
-    title: "President of ASEM",
-    description: "American Society of Eng Managers",
-    link: "https://asem.org/"
-  },
-  {
-    title: "Doerr Leadership Coaching",
-    description: "Leadership development program",
-    link: "https://doerr.rice.edu/"
-  },
-  {
-    title: "oSTEM Mentor",
-    description: "Mentoring queer students in STEM",
-    link: "https://ostem.org/"
-  },
-  {
-    title: "President of TEDxAUBG",
-    description: "Ideas worth spreading in Bulgaria",
-    link: "https://www.tedxaubg.com/"
-  },
-  {
-    title: "Broadway Club Choreographer",
-    description: "Musical production and choreography",
-    link: "https://www.youtube.com/watch?v=KTMeuTJa7iM"
-  },
-  {
-    title: "Oxford Summer School",
-    description: "Advanced business/econ program",
-    link: null
-  },
-  {
-    title: "Rhythm Cycling Coach @ Sunride",
-    description: "Fitness & cycling community",
-    link: "https://www.instagram.com/sunride.al"
-  }
-];
+{
+  title: "President of ASEM",
+  description: "American Society of Eng Managers",
+  link: "https://asem.org/"
+},
+{
+  title: "Doerr Leadership Coaching",
+  description: "Leadership development program",
+  link: "https://doerr.rice.edu/"
+},
+{
+  title: "oSTEM Mentor",
+  description: "Mentoring queer students in STEM",
+  link: "https://ostem.org/"
+},
+{
+  title: "President of TEDxAUBG",
+  description: "Ideas worth spreading in Bulgaria",
+  link: "https://www.tedxaubg.com/"
+},
+{
+  title: "Broadway Club Choreographer",
+  description: "Musical production and choreography",
+  link: "https://www.youtube.com/watch?v=KTMeuTJa7iM"
+},
+{
+  title: "Oxford Summer School",
+  description: "Advanced business/econ program",
+  link: null
+},
+{
+  title: "Rhythm Cycling Coach @ Sunride",
+  description: "Fitness & cycling community",
+  link: "https://www.instagram.com/sunride.al"
+}];
+
 
 export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -84,17 +84,17 @@ export default function Home() {
           {/* Desktop Navigation */}
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             {NAV.map((item) =>
-              item.href.startsWith("/") ?
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="hover:opacity-70 transition-opacity">
+            item.href.startsWith("/") ?
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:opacity-70 transition-opacity">
                     {item.label}
                   </Link> :
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="hover:opacity-70 transition-opacity">
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:opacity-70 transition-opacity">
                     {item.label}
                   </a>
             )}
@@ -110,29 +110,29 @@ export default function Home() {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="sm:hidden border-t border-[var(--color-border)] bg-[var(--color-background)]">
+        {mobileMenuOpen &&
+        <nav className="sm:hidden border-t border-[var(--color-border)] bg-[var(--color-background)]">
             <div className="px-6 py-4 flex flex-col gap-4">
               {NAV.map((item) =>
-                item.href.startsWith("/") ?
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="hover:opacity-70 transition-opacity py-2">
+            item.href.startsWith("/") ?
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:opacity-70 transition-opacity py-2">
                       {item.label}
                     </Link> :
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="hover:opacity-70 transition-opacity py-2">
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:opacity-70 transition-opacity py-2">
                       {item.label}
                     </a>
-              )}
+            )}
             </div>
           </nav>
-        )}
+        }
       </header>
 
       {/* Hero - Full Screen */}
@@ -216,7 +216,7 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover w-full h-auto" />
+              className="object-cover !w-[468px] !h-[418px] !max-w-[468px]" />
           </div>
         </div>
       </section>
@@ -226,15 +226,15 @@ export default function Home() {
         <h2 className="text-lg font-medium mb-8">Building Community</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {COMMUNITY_ITEMS.map((item, index) =>
-            <div
-              key={index}
-              className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
+          <div
+            key={index}
+            className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
                 {item.link ?
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block">
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block">
                     <h3 className="font-semibold text-sm sm:text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
                       {item.title}
                       <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -243,13 +243,13 @@ export default function Home() {
                       {item.description}
                     </p>
                   </a> :
-                  <>
+            <>
                     <h3 className="font-semibold text-sm sm:text-base">{item.title}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-[var(--color-muted-foreground)]">
                       {item.description}
                     </p>
                   </>
-                }
+            }
             </div>
           )}
         </div>
