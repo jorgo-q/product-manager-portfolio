@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Mail, Linkedin, MapPin, Github } from "lucide-react";
+import { ArrowUpRight, Mail, Linkedin, MapPin, Github, FileText, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const NAV = [
@@ -60,6 +60,7 @@ const COMMUNITY_ITEMS = [
 export default function Home() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -78,9 +79,9 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="font-semibold tracking-tight !whitespace-pre-line">JQ
-
-          </a>
+          <a href="#top" className="font-semibold tracking-tight">JQ</a>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             {NAV.map((item) =>
               item.href.startsWith("/") ?
@@ -88,19 +89,50 @@ export default function Home() {
                   key={item.href}
                   href={item.href}
                   className="hover:opacity-70 transition-opacity">
-
                     {item.label}
                   </Link> :
                 <a
                   key={item.href}
                   href={item.href}
                   className="hover:opacity-70 transition-opacity">
-
                     {item.label}
                   </a>
             )}
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="sm:hidden p-2 hover:bg-[var(--color-secondary)] rounded-lg transition-colors"
+            aria-label="Toggle menu">
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <nav className="sm:hidden border-t border-[var(--color-border)] bg-[var(--color-background)]">
+            <div className="px-6 py-4 flex flex-col gap-4">
+              {NAV.map((item) =>
+                item.href.startsWith("/") ?
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="hover:opacity-70 transition-opacity py-2">
+                      {item.label}
+                    </Link> :
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="hover:opacity-70 transition-opacity py-2">
+                      {item.label}
+                    </a>
+              )}
+            </div>
+          </nav>
+        )}
       </header>
 
       {/* Hero - Full Screen */}
@@ -109,15 +141,14 @@ export default function Home() {
         
         {/* Centered Content */}
         <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             Jorgo Qirjaj
           </h1>
-          <div className="mt-6 h-12 sm:h-16 flex items-center justify-center">
+          <div className="mt-6 h-12 sm:h-14 md:h-16 flex items-center justify-center">
             <p
-              className={`text-2xl sm:text-3xl md:text-4xl text-[var(--color-muted-foreground)] transition-all duration-500 ${
+              className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[var(--color-muted-foreground)] transition-all duration-500 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`
               }>
-
               {ROTATING_TITLES[currentTitleIndex]}
             </p>
           </div>
@@ -125,29 +156,24 @@ export default function Home() {
 
         {/* Bottom Content */}
         <div className="pb-12 flex flex-col items-center gap-6 max-w-2xl">
-          <p className="text-center text-base text-[var(--color-muted-foreground)] leading-relaxed !whitespace-pre-line !whitespace-pre-line">Hi, I'm Jorgo, a product manager passionate about building practical and human-centered software. I combine engineering thinking with empathy to create products that solve real problems and scale globally.
-
-
-
-
+          <p className="text-center text-sm sm:text-base text-[var(--color-muted-foreground)] leading-relaxed px-4">
+            Hi, I'm Jorgo, a product manager passionate about building practical and human-centered software. I combine engineering thinking with empathy to create products that solve real problems and scale globally.
           </p>
           <p className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
             <MapPin size={16} /> Houston, Texas
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 px-4">
             <Link
               href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors text-sm">
               <Linkedin size={16} /> LinkedIn
               <ArrowUpRight size={16} className="opacity-70" />
             </Link>
             <Link
               href="https://github.com/jorgo-q"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors text-sm">
               <Github size={16} /> GitHub
               <ArrowUpRight size={16} className="opacity-70" />
             </Link>
@@ -155,9 +181,9 @@ export default function Home() {
               href="/JQ_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors">
-
-              View CV <ArrowUpRight size={16} className="opacity-70" />
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-secondary)] transition-colors text-sm">
+              <FileText size={16} /> View CV
+              <ArrowUpRight size={16} className="opacity-70" />
             </a>
           </div>
         </div>
@@ -168,19 +194,19 @@ export default function Home() {
         <div className="grid gap-8 sm:grid-cols-2 items-start">
           <div>
             <h2 className="text-lg font-medium">About</h2>
-            <p className="mt-4 text-[var(--color-muted-foreground)]">
+            <p className="mt-4 text-sm sm:text-base text-[var(--color-muted-foreground)]">
               I build products that bridge technology and real human needs. From launching Albania's first Open Banking services at EasyPay to creating AI-powered compliance tools at Redocs, I've led & collaborated with cross-functional teams in several industries.
             </p>
-            <p className="mt-4 text-[var(--color-muted-foreground)]">
+            <p className="mt-4 text-sm sm:text-base text-[var(--color-muted-foreground)]">
               As a Fulbright Fellow at Rice, I'm deepening my expertise in engineering product management, data, and AI, blending technical curiosity with a people-first mindset.
             </p>
-            <p className="mt-4 text-[var(--color-muted-foreground)]">
+            <p className="mt-4 text-sm sm:text-base text-[var(--color-muted-foreground)]">
               Whether I'm leading a sprint planning meeting or building a community outside of work, my focus stays the same -- to build systems that inspire action, collaboration, and progress.
             </p>
             <div className="mt-6">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium">
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-6 py-3 hover:opacity-90 transition-opacity font-medium text-sm sm:text-base">
                 Projects
                 <ArrowUpRight size={18} />
               </Link>
@@ -190,8 +216,7 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !w-[99.6%] !h-[409px] !max-w-[99.6%]" />
-
+              className="object-cover w-full h-auto" />
           </div>
         </div>
       </section>
@@ -204,25 +229,23 @@ export default function Home() {
             <div
               key={index}
               className="group rounded-xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 bg-[var(--color-card)]">
-
                 {item.link ?
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block">
-
-                    <h3 className="font-semibold text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
+                    <h3 className="font-semibold text-sm sm:text-base group-hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
                       {item.title}
                       <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h3>
-                    <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line !whitespace-pre-line">
+                    <p className="mt-2 text-xs sm:text-sm text-[var(--color-muted-foreground)]">
                       {item.description}
                     </p>
                   </a> :
                   <>
-                    <h3 className="font-semibold text-base">{item.title}</h3>
-                    <p className="mt-2 text-sm text-[var(--color-muted-foreground)] !whitespace-pre-line">
+                    <h3 className="font-semibold text-sm sm:text-base">{item.title}</h3>
+                    <p className="mt-2 text-xs sm:text-sm text-[var(--color-muted-foreground)]">
                       {item.description}
                     </p>
                   </>
@@ -235,24 +258,24 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">
             Get in touch
           </h2>
-          <p className="text-lg text-[var(--color-muted-foreground)] mb-12 leading-relaxed !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line !whitespace-pre-line">I'm always open to exploring new product ideas, strategic partnerships, or consulting on technology and innovation.
-
+          <p className="text-base sm:text-lg text-[var(--color-muted-foreground)] mb-12 leading-relaxed px-4">
+            I'm always open to exploring new product ideas, strategic partnerships, or consulting on technology and innovation.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-12">
             <a
               href="mailto:qirjaj.jorgo@gmail.com?subject=Hello%20Jorgo"
-              className="group inline-flex items-center gap-3 text-xl sm:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105">
-              <Mail size={24} className="group-hover:rotate-6 transition-transform" />
+              className="group inline-flex items-center gap-3 text-lg sm:text-xl md:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105 break-all">
+              <Mail size={24} className="group-hover:rotate-6 transition-transform flex-shrink-0" />
               <span className="font-medium">qirjaj.jorgo@gmail.com</span>
             </a>
             <span className="hidden sm:inline text-2xl text-[var(--color-muted-foreground)]">•</span>
             <Link
               href="https://www.linkedin.com/in/jorgo-qirjaj-721a44120/"
               target="_blank"
-              className="group inline-flex items-center gap-3 text-xl sm:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105">
+              className="group inline-flex items-center gap-3 text-lg sm:text-xl md:text-2xl hover:text-[var(--color-primary)] transition-all duration-300 hover:scale-105">
               <Linkedin size={24} className="group-hover:rotate-6 transition-transform" />
               <span className="font-medium">LinkedIn</span>
               <ArrowUpRight size={18} className="opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -266,14 +289,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[var(--color-border)]">
-        <div className="mx-auto max-w-5xl px-6 py-10 text-sm flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto max-w-5xl px-6 py-10 text-sm flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Jorgo Qirjaj</p>
-          <div className="flex items-center gap-4">
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity">Let's build something that makes a difference 🚀</a>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--color-foreground)] text-[var(--color-background)] px-4 py-2 hover:opacity-90 transition-opacity text-sm">
+              Let's build something that makes a difference 🚀
+            </a>
             <a href="#top" className="hover:opacity-70">Back to top</a>
           </div>
         </div>
       </footer>
     </div>);
-
 }
