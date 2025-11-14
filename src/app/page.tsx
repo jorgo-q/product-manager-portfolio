@@ -192,7 +192,7 @@ export default function Home() {
       {/* About */}
       <section id="about" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
         <div className="grid gap-8 sm:grid-cols-2 items-start">
-          <div>
+          <div className="text-center sm:text-left">
             <h2 className="text-lg font-medium">About</h2>
             <p className="mt-4 text-sm sm:text-base text-[var(--color-muted-foreground)]">
               I build products that bridge technology and real human needs. From launching Albania's first Open Banking services at EasyPay to creating AI-powered compliance tools at Redocs, I've led & collaborated with cross-functional teams in several industries.
@@ -216,14 +216,14 @@ export default function Home() {
             <img
               alt="Portrait of Jorgo Qirjaj"
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/jorgo2-1758071278739.jpg"
-              className="object-cover !w-[371px] !h-[418px] !max-w-[371px]" />
+              className="object-cover !w-[371px] !h-[415px] !max-w-[371px]" />
           </div>
         </div>
       </section>
 
       {/* Building Community */}
       <section id="building-community" className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-        <h2 className="text-lg font-medium mb-8">Building Community</h2>
+        <h2 className="text-lg font-medium mb-8 text-center sm:text-left">Building Community</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {COMMUNITY_ITEMS.map((item, index) =>
           <div
