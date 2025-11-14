@@ -92,7 +92,7 @@ export default function ProjectsPage() {
 
       {/* Projects Section */}
       <main className="mx-auto max-w-6xl px-6 pt-24 pb-16">
-        <div className="mb-12">
+        <div className="mb-12 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Projects</h1>
           <p className="mt-4 text-lg text-[var(--color-muted-foreground)]">
             A collection of products I've built and shipped across fintech, SaaS, and AI
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 hover:shadow-lg transition-all duration-300"
+              className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 hover:shadow-lg hover:border-[var(--color-foreground)] transition-all duration-300 cursor-pointer"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4 mb-4">
@@ -115,10 +115,10 @@ export default function ProjectsPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 group/link"
                     >
-                      <h2 className="text-xl font-semibold group-hover/link:text-[var(--color-primary)] transition-colors">
+                      <h2 className="text-xl font-semibold group-hover:text-[var(--color-primary)] transition-colors">
                         {project.title}
                       </h2>
-                      <ExternalLink size={16} className="opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                      <ExternalLink size={16} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                     </a>
                   ) : (
                     <h2 className="text-xl font-semibold">
